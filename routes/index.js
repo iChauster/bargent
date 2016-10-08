@@ -8,8 +8,8 @@ app.get('/', function(req, res) {
 
 app.post('/getExpenseData', function (req,res){
 	console.log(req.body);
+	res.end('ok');
 });
-
 
 
 module.exports = app;

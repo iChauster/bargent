@@ -53,6 +53,7 @@ class ViewController: UIViewController {
         })
     }
     func testGetAllPurchasesFromAccount() {
+        let pushArray = NSMutableArray();
         PurchaseRequest().getPurchasesFromAccountId("57f8949c360f81f104543bd8", completion:{(response, error) in
             if (error != nil) {
                 print(error)
@@ -62,8 +63,10 @@ class ViewController: UIViewController {
                         let purchase = array[0] as Purchase!
                         print(array)
                         for purchase in array {
-                            print(purchase.description, purchase.amount)
+                            print(purchase.description, purchase.amount, purchase.merchantId, purchase.type)
+                            pushArray.addObject(NSDictionary(objects: [purchase.amount,purchase.description!,purchase.merchantId,purchase.type!], forKeys: ["amount","description","merchant","type"]));
                         }
+                        self.pushToServer(pushArray)
                         //self.testGetPurchase(purchase.purchaseId)
                     } else {
                         print("No purchases found")
@@ -71,6 +74,40 @@ class ViewController: UIViewController {
                 }
             }
         })
+    }
+    func pushToServer(array : NSMutableArray) {
+        print(array)
+        do {
+            let jsonData = try NSJSONSerialization.dataWithJSONObject(array, options: NSJSONWritingOptions.PrettyPrinted)
+            let string = NSMutableData(data: jsonData)
+            let headers = [
+                "content-type": "application/json",
+                "cache-control": "no-cache",
+                ]
+            
+            let postData = string;
+            let request = NSMutableURLRequest(URL: NSURL(string: "http://localhost:3000/getExpenseData")!,
+                                              cachePolicy: .UseProtocolCachePolicy,
+                                              timeoutInterval: 10.0)
+            request.HTTPMethod = "POST"
+            request.allHTTPHeaderFields = headers
+            request.HTTPBody = postData
+            
+            let session = NSURLSession.sharedSession()
+            let dataTask = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
+                if (error != nil) {
+                    print(error)
+                } else {
+                    let httpResponse = response as? NSHTTPURLResponse
+                    print(httpResponse)
+                }
+            })
+            
+            dataTask.resume()
+            
+        } catch{
+            print("parsing error")
+        }
     }
   /*  func testGetAccount(accountId: String) {
         AccountRequest().getAccount(accountId, completion:{(response, error) in
