@@ -11,8 +11,4 @@ app.post('/getExpenseData', function (req,res){
 	res.end('ok');
 });
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d669d0cf8a18c93aa8038dcc1198b5e636781ae7
 module.exports = app;
