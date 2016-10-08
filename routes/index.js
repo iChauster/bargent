@@ -10,4 +10,6 @@ app.post('/getExpenseData', function (req,res){
 	console.log(req.body);
 });
 
-module.exports = router;
+
+
+module.exports = app;
