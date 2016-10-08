@@ -9,7 +9,7 @@
 import UIKit
 import NessieFmwk
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     let client = NSEClient.sharedInstance
     override func viewDidLoad() {
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         })
     }
     func testPostPurchase() {
-        let purchaseToCreate = Purchase(merchantId: "57f895e7360f81f104543bdb", status: .Cancelled, medium: .Balance, payerId: "57f8949c360f81f104543bd8", amount: 4.5, type: "merchant", purchaseDate: NSDate(), description: "Description", purchaseId: "asd")
+        let purchaseToCreate = Purchase(merchantId: "57f895e7360f81f104543bdb", status: .Cancelled, medium: .Balance, payerId: "57f8949c360f81f104543bd8", amount: 10, type: "merchant", purchaseDate: NSDate(), description: "Description", purchaseId: "asd")
         PurchaseRequest().postPurchase(purchaseToCreate, accountId: "57f8949c360f81f104543bd8", completion:{(response, error) in
             if (error != nil) {
                 print(error)
@@ -108,6 +108,19 @@ class ViewController: UIViewController {
         } catch{
             print("parsing error")
         }
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("BargentCell") as! BargentTableViewCell
+        cell.view.backgroundColor = UIColor.redColor()
+        cell.merchant.text = "Walmart"
+        cell.percentageIncrease.text = "26%"
+        return cell;
+    }
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1;
+    }
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        <#code#>
     }
   /*  func testGetAccount(accountId: String) {
         AccountRequest().getAccount(accountId, completion:{(response, error) in

@@ -15,22 +15,24 @@ var app = express();
  var apiKey = "d914174469cc843bb832513eda8b644b";
  var ob =  {
               "name": "Walmart",
+              "category" : [
+              "Pharmacy, Food, Grocery"],
              "address": {
                  "street_number": "17",
                    "street_name": "Cat",
                    "city": "Detroit",
                    "state": "MI",
-                   "zip": "48201",
+                   "zip": "48201"
            },
                "geocode": {
                    "lat": 42,
-                   "lng": -83,
+                   "lng": 83
                }
            }
 //Config Stuff
 var Config = (function() {
   function Config() { }
-  Config.baseUrl = "http://api.reimaginebanking.com:80";
+  Config.baseUrl = "http://api.reimaginebanking.com";
 
   Config.getApiKey = function() {
     return this.apiKey;
@@ -44,7 +46,7 @@ var Config = (function() {
 
   return Config;
 })();
-
+Config.setApiKey(apiKey);
 
  var reqy = Config.request;
 //Merchant Stuff
@@ -57,6 +59,7 @@ var Merchant = (function() {
     }
 
     Merchant.urlWithEntity = function() {
+        console.log(Config.baseUrl+'/merchants');
         return Config.baseUrl+'/merchants';
     }
 
@@ -74,6 +77,9 @@ var Merchant = (function() {
       });
     }
     Merchant.createMerchant = function(merchant, callback) {
+        console.log('go');
+        console.log(merchant)
+        console.log(this.urlWithEntity() + this.apiKey());
     request.post(this.urlWithEntity() + this.apiKey())
       .set({'Content-Type': 'application/json'})
       .send(merchant)
@@ -108,7 +114,7 @@ var Merchant = (function() {
     return Merchant;
 
 })();
-
+var merch = Merchant()
 
 module.exports = Merchant;
 module.exports = Config;
