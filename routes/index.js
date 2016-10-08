@@ -1,9 +1,13 @@
 var express = require('express');
-var router = express.Router();
+var app = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+app.get('/', function(req, res) {
+  res.render('index');
+});
+
+app.post('/getExpenseData', function (req,res){
+	console.log(req.body);
 });
 
 module.exports = router;
