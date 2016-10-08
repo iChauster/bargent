@@ -82,7 +82,7 @@ var Merchant = (function() {
         console.log(this.urlWithEntity() + this.apiKey());
     request.post(this.urlWithEntity() + this.apiKey())
       .set({'Content-Type': 'application/json'})
-      .send(merchant)
+      .send(merchant) ;
       .end(function(err, res) {
         if (err) {
           console.log(err.message);
@@ -104,7 +104,7 @@ var Merchant = (function() {
                }
            }
            */
-        callback(res.statusCode);
+        callback(res);
 
       });
     
