@@ -1,5 +1,9 @@
 var express = require('express');
 var request = require('superagent');
+var watson = require('watson-developer-cloud');
+var alchemy_language = watson.alchemy_language({
+  api_key: '246270440a48a011f8f9d55cab7956302a918a99'
+})
 var app = express.Router();
 
 /* GET home page. */
@@ -10,12 +14,60 @@ app.get('/', function(req, res) {
 app.post('/getExpenseData', function (req,res){
 	var array = req.body;
 	var totalAmount = 0;
-	for (a in array){
+	var a = 0;
+	var c = {};
+	var loop = function(arr){
+		var obj = arr[a];
+		Merchant.getMerchant(obj.merchant, function (res){
+			//console.log(res);
+ 			var string = "";
+ 			var categories = res.category;
+ 			for (i in categories){
+ 				string = string.concat(categories[i], ", ");
+ 			}
+ 			console.log(arr[a].description + "====================" + a);
+ 			getConcept(arr[a].description + ' ' + string, function(res){
+ 				console.log(res);
+ 				a ++;
+ 				if(a < arr.length){
+ 					loop(arr)
+ 				}
+
+			});
+ 		});
+		if(!c[obj.merchant]){
+			c[obj.merchant] = obj.amount;
+		}else{
+			c[obj.merchant] += obj.amount;
+		} 
+		totalAmount += obj.amount;
+		
+	}
+		for (k in c) {
+			if (k){
+ 				//console.log(k);
+ 			}
+		}
+	/*for (a in array){
 		var obj = array[a]
-		console.log(obj + "===========");
-		console.log("\n amount : "+ obj.amount + "\n description : " + obj.description + "\n merchant : " + obj.merchant + "\n type : " + obj.type);
+		console.log(array)
+		//console.log(obj + "===========");
+		//console.log("\n amount : "+ obj.amount + "\n description : " + obj.description + "\n merchant : " + obj.merchant + "\n type : " + obj.type);
 		// you need to request to find the merchant's name and category through the id
 		var c = {};
+		Merchant.getMerchant(obj.merchant, function (res){
+			//console.log(res);
+ 			var string = "";
+ 			var categories = res.category;
+ 			for (i in categories){
+ 				string = string.concat(categories[i], ", ");
+ 			}
+ 			console.log(obj.description + "====================");
+ 			getConcept(obj.description + ' ' + string, function(res){
+ 				//console.log(res);
+
+			});
+ 		});
 		if(!c[obj.merchant]){
 			c[obj.merchant] = obj.amount;
 		}else{
@@ -23,16 +75,30 @@ app.post('/getExpenseData', function (req,res){
 		} 
 		totalAmount += obj.amount;
 		for (k in c) {
-			if (k)
- 				Merchant.getMerchant(k,function(res){
- 					console.log(res);
- 				});
+			if (k){
+ 				//console.log(k);
+ 			}
 		}
-	}
+	}*/
+	loop(array);
 	array.sort(priceCompare)
 	console.log(array.reverse());
 	res.send(JSON.stringify(array.reverse()));
 });
+function getConcept(textInContext, callback) {
+	var parameters = {
+  		text: textInContext
+  	};
+
+	alchemy_language.concepts(parameters, function (err, response) {
+  		if (err){
+    		console.log('error:', err);
+    	} else {
+    		var a = JSON.stringify(response, null, 2);
+    		callback(a);
+    	}
+	});
+}
 function priceCompare(a,b){
 	if(a.amount > b.amount){
 		return 1;

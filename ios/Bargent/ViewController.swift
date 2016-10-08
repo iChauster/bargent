@@ -40,7 +40,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     func testPostPurchase() {
         let purchaseToCreate = Purchase(merchantId: "57f895e7360f81f104543bdb", status: .Cancelled, medium: .Balance, payerId: "57f8949c360f81f104543bd8", amount: 10, type: "merchant", purchaseDate: NSDate(), description: "Description", purchaseId: "asd")
-        PurchaseRequest().postPurchase(purchaseToCreate, accountId: "57f8949c360f81f104543bd8", completion:{(response, error) in
+        PurchaseRequest().postPurchase(purchaseToCreate, accountId: "57f94dd7360f81f104543bff", completion:{(response, error) in
             if (error != nil) {
                 print(error)
             } else {
@@ -54,7 +54,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     func testGetAllPurchasesFromAccount() {
         let pushArray = NSMutableArray();
-        PurchaseRequest().getPurchasesFromAccountId("57f8949c360f81f104543bd8", completion:{(response, error) in
+        PurchaseRequest().getPurchasesFromAccountId("57f94dd7360f81f104543bff", completion:{(response, error) in
             if (error != nil) {
                 print(error)
             } else {
@@ -100,7 +100,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 } else {
                     let httpResponse = response as? NSHTTPURLResponse
                     print(httpResponse)
-                    tr
+                    if(httpResponse?.statusCode == 200){
+                        dispatch_async(dispatch_get_main_queue(), {
+                            do{
+                                let arr  = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! NSArray;
+                                print(arr.reverse())
+                            }catch{
+                                
+                            }
+                        })
+                    }
+                    
                 }
             })
             
