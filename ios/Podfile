@@ -17,6 +17,12 @@ target 'NessieTestProj' do
 
 end
 
+target 'Bargent' do
+    
+    pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+
+end
+
 target 'NessieTestProjTests' do
 
 end

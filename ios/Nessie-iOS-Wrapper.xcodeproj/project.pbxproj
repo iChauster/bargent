@@ -14,6 +14,8 @@
 		2CA67DA21DA8B74F0093B7F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA67DA01DA8B74F0093B7F6 /* LaunchScreen.storyboard */; };
 		2CA67DAD1DA8B74F0093B7F6 /* BargentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA67DAC1DA8B74F0093B7F6 /* BargentTests.swift */; };
 		2CA67DB81DA8B74F0093B7F6 /* BargentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA67DB71DA8B74F0093B7F6 /* BargentUITests.swift */; };
+		2CA67DC41DA8BFA00093B7F6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA67DC31DA8BFA00093B7F6 /* SwiftyJSON.framework */; };
+		2CA67DC51DA8C00C0093B7F6 /* NessieFmwk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C549F11ACEE595002206AC /* NessieFmwk.framework */; };
 		5B4B74E61BB98A0600197534 /* NessieFmwk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C549F11ACEE595002206AC /* NessieFmwk.framework */; };
 		5B4B74E71BB98A0600197534 /* NessieFmwk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8C549F11ACEE595002206AC /* NessieFmwk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5BB790541B9670A800488749 /* Merchant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB790531B9670A800488749 /* Merchant.swift */; };
@@ -112,6 +114,7 @@
 		2CA67DB31DA8B74F0093B7F6 /* BargentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BargentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA67DB71DA8B74F0093B7F6 /* BargentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BargentUITests.swift; sourceTree = "<group>"; };
 		2CA67DB91DA8B74F0093B7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CA67DC31DA8BFA00093B7F6 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/Nessie-iOS-Wrapper-adczflazfnqhuogelqbwqwrbrijb/Build/Products/Debug-iphonesimulator/Pods-Nessie-iOS-Wrapper/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		4043BC7A9BA047A099E40B47 /* Pods_Nessie_iOS_Wrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nessie_iOS_Wrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56A7A45AD1C469B89D0C6FE9 /* Pods-Nessie-iOS-Wrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nessie-iOS-Wrapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nessie-iOS-Wrapper/Pods-Nessie-iOS-Wrapper.debug.xcconfig"; sourceTree = "<group>"; };
 		57C2E31B0FA56AC94DDD7A50 /* Pods-Nessie-iOS-Wrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nessie-iOS-Wrapper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nessie-iOS-Wrapper/Pods-Nessie-iOS-Wrapper.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CA67DC51DA8C00C0093B7F6 /* NessieFmwk.framework in Frameworks */,
+				2CA67DC41DA8BFA00093B7F6 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +218,7 @@
 		084A162C48D1036333F06D86 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CA67DC31DA8BFA00093B7F6 /* SwiftyJSON.framework */,
 				4043BC7A9BA047A099E40B47 /* Pods_Nessie_iOS_Wrapper.framework */,
 				8BE40FF841192D654BF4C793 /* Pods_NessieTestProj.framework */,
 			);
@@ -1192,6 +1198,7 @@
 				2CA67DBB1DA8B74F0093B7F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CA67DC11DA8B74F0093B7F6 /* Build configuration list for PBXNativeTarget "BargentTests" */ = {
 			isa = XCConfigurationList;
@@ -1200,6 +1207,7 @@
 				2CA67DBD1DA8B74F0093B7F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CA67DC21DA8B74F0093B7F6 /* Build configuration list for PBXNativeTarget "BargentUITests" */ = {
 			isa = XCConfigurationList;
@@ -1208,6 +1216,7 @@
 				2CA67DBF1DA8B74F0093B7F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B834EB2A1AE5BB5000379E11 /* Build configuration list for PBXNativeTarget "NessieTestProj" */ = {
 			isa = XCConfigurationList;
