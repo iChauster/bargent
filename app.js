@@ -4,12 +4,31 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var http = require('http');
+var request = require('superagent');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
 
+
+var Config = (function() {
+  function Config() { }
+  Config.baseUrl = "http://api.reimaginebanking.com:80";
+
+  Config.getApiKey = function() {
+    return this.apiKey;
+  };
+
+  Config.setApiKey = function(key) {
+    this.apiKey = key;
+  };
+
+  Config.request = request;
+
+  return Config;
+})();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
