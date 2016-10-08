@@ -1,0 +1,6 @@
+framework module Pods_Nessie_iOS_Wrapper {
+  umbrella header "Pods-Nessie-iOS-Wrapper-umbrella.h"
+
+  export *
+  module * { export * }
+}

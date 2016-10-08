@@ -1,0 +1,1260 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CA67D981DA8B74E0093B7F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA67D971DA8B74E0093B7F6 /* AppDelegate.swift */; };
+		2CA67D9A1DA8B74E0093B7F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA67D991DA8B74E0093B7F6 /* ViewController.swift */; };
+		2CA67D9D1DA8B74E0093B7F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA67D9B1DA8B74E0093B7F6 /* Main.storyboard */; };
+		2CA67D9F1DA8B74F0093B7F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA67D9E1DA8B74F0093B7F6 /* Assets.xcassets */; };
+		2CA67DA21DA8B74F0093B7F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA67DA01DA8B74F0093B7F6 /* LaunchScreen.storyboard */; };
+		2CA67DAD1DA8B74F0093B7F6 /* BargentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA67DAC1DA8B74F0093B7F6 /* BargentTests.swift */; };
+		2CA67DB81DA8B74F0093B7F6 /* BargentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA67DB71DA8B74F0093B7F6 /* BargentUITests.swift */; };
+		5B4B74E61BB98A0600197534 /* NessieFmwk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C549F11ACEE595002206AC /* NessieFmwk.framework */; };
+		5B4B74E71BB98A0600197534 /* NessieFmwk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8C549F11ACEE595002206AC /* NessieFmwk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5BB790541B9670A800488749 /* Merchant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB790531B9670A800488749 /* Merchant.swift */; };
+		5BF0FEA01D8C675700223ED4 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0FE9F1D8C675700223ED4 /* TabViewController.swift */; };
+		5BF0FEA21D8C676900223ED4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0FEA11D8C676900223ED4 /* SecondViewController.swift */; };
+		5BF9F35C1B98A902000D2D4D /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9F35B1B98A902000D2D4D /* Transfer.swift */; };
+		5BF9F35E1B98A90E000D2D4D /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9F35D1B98A90E000D2D4D /* Purchase.swift */; };
+		B81D5BC31B0A87470086B2C6 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81D5BC21B0A87470086B2C6 /* Customer.swift */; };
+		B834EB091AE5AAEA00379E11 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834EB081AE5AAEA00379E11 /* Account.swift */; };
+		B834EB131AE5BB5000379E11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834EB121AE5BB5000379E11 /* AppDelegate.swift */; };
+		B834EB151AE5BB5000379E11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834EB141AE5BB5000379E11 /* ViewController.swift */; };
+		B834EB181AE5BB5000379E11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B834EB161AE5BB5000379E11 /* Main.storyboard */; };
+		B834EB1A1AE5BB5000379E11 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B834EB191AE5BB5000379E11 /* Images.xcassets */; };
+		B834EB1D1AE5BB5000379E11 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B834EB1B1AE5BB5000379E11 /* LaunchScreen.xib */; };
+		B834EB291AE5BB5000379E11 /* NessieTestProjTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834EB281AE5BB5000379E11 /* NessieTestProjTests.swift */; };
+		B834EB301AE5BB9300379E11 /* NessieFmwk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C549F11ACEE595002206AC /* NessieFmwk.framework */; };
+		B8411CAC1AF9706B00047389 /* ATM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8411CAB1AF9706B00047389 /* ATM.swift */; };
+		B8411CAE1AF9750100047389 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8411CAD1AF9750100047389 /* Address.swift */; };
+		B8411CB01AF97C3800047389 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8411CAF1AF97C3800047389 /* Bill.swift */; };
+		B8411CB21AF97C4000047389 /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8411CB11AF97C4000047389 /* Branch.swift */; };
+		B85401A41B0A895400031001 /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85401A31B0A895400031001 /* Deposit.swift */; };
+		B85401A61B0AE49500031001 /* Withdrawal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85401A51B0AE49500031001 /* Withdrawal.swift */; };
+		B86E4A7D1B0BD3C00076A6D0 /* EnterpriseRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86E4A7C1B0BD3C00076A6D0 /* EnterpriseRequests.swift */; };
+		B86E4A7F1B0BD6EF0076A6D0 /* NSEFunctionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86E4A7E1B0BD6EF0076A6D0 /* NSEFunctionalTests.swift */; };
+		B8C549F71ACEE595002206AC /* Nessie-iOS-Wrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B8C549F61ACEE595002206AC /* Nessie-iOS-Wrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8C549FD1ACEE595002206AC /* NessieFmwk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C549F11ACEE595002206AC /* NessieFmwk.framework */; };
+		B8C54A041ACEE595002206AC /* Nessie_iOS_WrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C54A031ACEE595002206AC /* Nessie_iOS_WrapperTests.swift */; };
+		B8C54A0E1ACEE5A6002206AC /* NSEClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C54A0D1ACEE5A6002206AC /* NSEClient.swift */; };
+		EADC8342DB705A16CD0268A1 /* Pods_Nessie_iOS_Wrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4043BC7A9BA047A099E40B47 /* Pods_Nessie_iOS_Wrapper.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F9CEE15C5FE77CBF8EA941DF /* Pods_NessieTestProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE40FF841192D654BF4C793 /* Pods_NessieTestProj.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CA67DA91DA8B74F0093B7F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8C549E81ACEE595002206AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CA67D941DA8B74E0093B7F6;
+			remoteInfo = Bargent;
+		};
+		2CA67DB41DA8B74F0093B7F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8C549E81ACEE595002206AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CA67D941DA8B74E0093B7F6;
+			remoteInfo = Bargent;
+		};
+		5B4B74E81BB98A0600197534 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8C549E81ACEE595002206AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C549F01ACEE595002206AC;
+			remoteInfo = "Nessie-iOS-Wrapper";
+		};
+		B834EB231AE5BB5000379E11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8C549E81ACEE595002206AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B834EB0D1AE5BB5000379E11;
+			remoteInfo = NessieTestProj;
+		};
+		B8C549FE1ACEE595002206AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8C549E81ACEE595002206AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C549F01ACEE595002206AC;
+			remoteInfo = "Nessie-iOS-Wrapper";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5B4B74EA1BB98A0600197534 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5B4B74E71BB98A0600197534 /* NessieFmwk.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2CA67D951DA8B74E0093B7F6 /* Bargent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bargent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA67D971DA8B74E0093B7F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2CA67D991DA8B74E0093B7F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2CA67D9C1DA8B74E0093B7F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2CA67D9E1DA8B74F0093B7F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CA67DA11DA8B74F0093B7F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2CA67DA31DA8B74F0093B7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CA67DA81DA8B74F0093B7F6 /* BargentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BargentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA67DAC1DA8B74F0093B7F6 /* BargentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BargentTests.swift; sourceTree = "<group>"; };
+		2CA67DAE1DA8B74F0093B7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CA67DB31DA8B74F0093B7F6 /* BargentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BargentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA67DB71DA8B74F0093B7F6 /* BargentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BargentUITests.swift; sourceTree = "<group>"; };
+		2CA67DB91DA8B74F0093B7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4043BC7A9BA047A099E40B47 /* Pods_Nessie_iOS_Wrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nessie_iOS_Wrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56A7A45AD1C469B89D0C6FE9 /* Pods-Nessie-iOS-Wrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nessie-iOS-Wrapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nessie-iOS-Wrapper/Pods-Nessie-iOS-Wrapper.debug.xcconfig"; sourceTree = "<group>"; };
+		57C2E31B0FA56AC94DDD7A50 /* Pods-Nessie-iOS-Wrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nessie-iOS-Wrapper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nessie-iOS-Wrapper/Pods-Nessie-iOS-Wrapper.release.xcconfig"; sourceTree = "<group>"; };
+		5B4FB38B5F365A889DDFFCAD /* Pods-NessieTestProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NessieTestProj.release.xcconfig"; path = "Pods/Target Support Files/Pods-NessieTestProj/Pods-NessieTestProj.release.xcconfig"; sourceTree = "<group>"; };
+		5BB790531B9670A800488749 /* Merchant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Merchant.swift; sourceTree = "<group>"; };
+		5BF0FE9F1D8C675700223ED4 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		5BF0FEA11D8C676900223ED4 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		5BF9F35B1B98A902000D2D4D /* Transfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
+		5BF9F35D1B98A90E000D2D4D /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		8BE40FF841192D654BF4C793 /* Pods_NessieTestProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NessieTestProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B81D5BC21B0A87470086B2C6 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		B834EB081AE5AAEA00379E11 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		B834EB0E1AE5BB5000379E11 /* NessieTestProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NessieTestProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B834EB111AE5BB5000379E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B834EB121AE5BB5000379E11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B834EB141AE5BB5000379E11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B834EB171AE5BB5000379E11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B834EB191AE5BB5000379E11 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B834EB1C1AE5BB5000379E11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B834EB221AE5BB5000379E11 /* NessieTestProjTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NessieTestProjTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B834EB271AE5BB5000379E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B834EB281AE5BB5000379E11 /* NessieTestProjTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NessieTestProjTests.swift; sourceTree = "<group>"; };
+		B8411CAB1AF9706B00047389 /* ATM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATM.swift; sourceTree = "<group>"; };
+		B8411CAD1AF9750100047389 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		B8411CAF1AF97C3800047389 /* Bill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		B8411CB11AF97C4000047389 /* Branch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
+		B85401A31B0A895400031001 /* Deposit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deposit.swift; sourceTree = "<group>"; };
+		B85401A51B0AE49500031001 /* Withdrawal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Withdrawal.swift; sourceTree = "<group>"; };
+		B86E4A7C1B0BD3C00076A6D0 /* EnterpriseRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterpriseRequests.swift; sourceTree = "<group>"; };
+		B86E4A7E1B0BD6EF0076A6D0 /* NSEFunctionalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSEFunctionalTests.swift; sourceTree = "<group>"; };
+		B8C549F11ACEE595002206AC /* NessieFmwk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NessieFmwk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C549F51ACEE595002206AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8C549F61ACEE595002206AC /* Nessie-iOS-Wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nessie-iOS-Wrapper.h"; sourceTree = "<group>"; };
+		B8C549FC1ACEE595002206AC /* Nessie-iOS-WrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nessie-iOS-WrapperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C54A021ACEE595002206AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8C54A031ACEE595002206AC /* Nessie_iOS_WrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nessie_iOS_WrapperTests.swift; sourceTree = "<group>"; };
+		B8C54A0D1ACEE5A6002206AC /* NSEClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSEClient.swift; sourceTree = "<group>"; };
+		CD131C9BC59CF05889A291E7 /* Pods-NessieTestProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NessieTestProj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NessieTestProj/Pods-NessieTestProj.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CA67D921DA8B74E0093B7F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA67DA51DA8B74F0093B7F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA67DB01DA8B74F0093B7F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B834EB0B1AE5BB5000379E11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B4B74E61BB98A0600197534 /* NessieFmwk.framework in Frameworks */,
+				B834EB301AE5BB9300379E11 /* NessieFmwk.framework in Frameworks */,
+				F9CEE15C5FE77CBF8EA941DF /* Pods_NessieTestProj.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B834EB1F1AE5BB5000379E11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C549ED1ACEE595002206AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EADC8342DB705A16CD0268A1 /* Pods_Nessie_iOS_Wrapper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C549F91ACEE595002206AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C549FD1ACEE595002206AC /* NessieFmwk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		084A162C48D1036333F06D86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4043BC7A9BA047A099E40B47 /* Pods_Nessie_iOS_Wrapper.framework */,
+				8BE40FF841192D654BF4C793 /* Pods_NessieTestProj.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2CA67D961DA8B74E0093B7F6 /* Bargent */ = {
+			isa = PBXGroup;
+			children = (
+				2CA67D971DA8B74E0093B7F6 /* AppDelegate.swift */,
+				2CA67D991DA8B74E0093B7F6 /* ViewController.swift */,
+				2CA67D9B1DA8B74E0093B7F6 /* Main.storyboard */,
+				2CA67D9E1DA8B74F0093B7F6 /* Assets.xcassets */,
+				2CA67DA01DA8B74F0093B7F6 /* LaunchScreen.storyboard */,
+				2CA67DA31DA8B74F0093B7F6 /* Info.plist */,
+			);
+			path = Bargent;
+			sourceTree = "<group>";
+		};
+		2CA67DAB1DA8B74F0093B7F6 /* BargentTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CA67DAC1DA8B74F0093B7F6 /* BargentTests.swift */,
+				2CA67DAE1DA8B74F0093B7F6 /* Info.plist */,
+			);
+			path = BargentTests;
+			sourceTree = "<group>";
+		};
+		2CA67DB61DA8B74F0093B7F6 /* BargentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2CA67DB71DA8B74F0093B7F6 /* BargentUITests.swift */,
+				2CA67DB91DA8B74F0093B7F6 /* Info.plist */,
+			);
+			path = BargentUITests;
+			sourceTree = "<group>";
+		};
+		B834EB0F1AE5BB5000379E11 /* NessieTestProj */ = {
+			isa = PBXGroup;
+			children = (
+				B834EB121AE5BB5000379E11 /* AppDelegate.swift */,
+				B834EB141AE5BB5000379E11 /* ViewController.swift */,
+				5BF0FEA11D8C676900223ED4 /* SecondViewController.swift */,
+				5BF0FE9F1D8C675700223ED4 /* TabViewController.swift */,
+				B86E4A7E1B0BD6EF0076A6D0 /* NSEFunctionalTests.swift */,
+				B834EB161AE5BB5000379E11 /* Main.storyboard */,
+				B834EB191AE5BB5000379E11 /* Images.xcassets */,
+				B834EB1B1AE5BB5000379E11 /* LaunchScreen.xib */,
+				B834EB101AE5BB5000379E11 /* Supporting Files */,
+			);
+			path = NessieTestProj;
+			sourceTree = "<group>";
+		};
+		B834EB101AE5BB5000379E11 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B834EB111AE5BB5000379E11 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B834EB251AE5BB5000379E11 /* NessieTestProjTests */ = {
+			isa = PBXGroup;
+			children = (
+				B834EB281AE5BB5000379E11 /* NessieTestProjTests.swift */,
+				B834EB261AE5BB5000379E11 /* Supporting Files */,
+			);
+			path = NessieTestProjTests;
+			sourceTree = "<group>";
+		};
+		B834EB261AE5BB5000379E11 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B834EB271AE5BB5000379E11 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B8C549E71ACEE595002206AC = {
+			isa = PBXGroup;
+			children = (
+				B8C549F31ACEE595002206AC /* Nessie-iOS-Wrapper */,
+				B8C54A001ACEE595002206AC /* Nessie-iOS-WrapperTests */,
+				B834EB0F1AE5BB5000379E11 /* NessieTestProj */,
+				B834EB251AE5BB5000379E11 /* NessieTestProjTests */,
+				2CA67D961DA8B74E0093B7F6 /* Bargent */,
+				2CA67DAB1DA8B74F0093B7F6 /* BargentTests */,
+				2CA67DB61DA8B74F0093B7F6 /* BargentUITests */,
+				B8C549F21ACEE595002206AC /* Products */,
+				F140BCB74EBB7A3A814D677B /* Pods */,
+				084A162C48D1036333F06D86 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B8C549F21ACEE595002206AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8C549F11ACEE595002206AC /* NessieFmwk.framework */,
+				B8C549FC1ACEE595002206AC /* Nessie-iOS-WrapperTests.xctest */,
+				B834EB0E1AE5BB5000379E11 /* NessieTestProj.app */,
+				B834EB221AE5BB5000379E11 /* NessieTestProjTests.xctest */,
+				2CA67D951DA8B74E0093B7F6 /* Bargent.app */,
+				2CA67DA81DA8B74F0093B7F6 /* BargentTests.xctest */,
+				2CA67DB31DA8B74F0093B7F6 /* BargentUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8C549F31ACEE595002206AC /* Nessie-iOS-Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				B8C549F61ACEE595002206AC /* Nessie-iOS-Wrapper.h */,
+				B8C549F41ACEE595002206AC /* Supporting Files */,
+				B8C54A0D1ACEE5A6002206AC /* NSEClient.swift */,
+				B834EB081AE5AAEA00379E11 /* Account.swift */,
+				B8411CAB1AF9706B00047389 /* ATM.swift */,
+				B8411CAD1AF9750100047389 /* Address.swift */,
+				B8411CAF1AF97C3800047389 /* Bill.swift */,
+				B8411CB11AF97C4000047389 /* Branch.swift */,
+				B81D5BC21B0A87470086B2C6 /* Customer.swift */,
+				B85401A31B0A895400031001 /* Deposit.swift */,
+				5BF9F35D1B98A90E000D2D4D /* Purchase.swift */,
+				5BF9F35B1B98A902000D2D4D /* Transfer.swift */,
+				B85401A51B0AE49500031001 /* Withdrawal.swift */,
+				5BB790531B9670A800488749 /* Merchant.swift */,
+				B86E4A7C1B0BD3C00076A6D0 /* EnterpriseRequests.swift */,
+			);
+			path = "Nessie-iOS-Wrapper";
+			sourceTree = "<group>";
+		};
+		B8C549F41ACEE595002206AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8C549F51ACEE595002206AC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B8C54A001ACEE595002206AC /* Nessie-iOS-WrapperTests */ = {
+			isa = PBXGroup;
+			children = (
+				B8C54A031ACEE595002206AC /* Nessie_iOS_WrapperTests.swift */,
+				B8C54A011ACEE595002206AC /* Supporting Files */,
+			);
+			path = "Nessie-iOS-WrapperTests";
+			sourceTree = "<group>";
+		};
+		B8C54A011ACEE595002206AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8C54A021ACEE595002206AC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F140BCB74EBB7A3A814D677B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56A7A45AD1C469B89D0C6FE9 /* Pods-Nessie-iOS-Wrapper.debug.xcconfig */,
+				57C2E31B0FA56AC94DDD7A50 /* Pods-Nessie-iOS-Wrapper.release.xcconfig */,
+				CD131C9BC59CF05889A291E7 /* Pods-NessieTestProj.debug.xcconfig */,
+				5B4FB38B5F365A889DDFFCAD /* Pods-NessieTestProj.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B8C549EE1ACEE595002206AC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C549F71ACEE595002206AC /* Nessie-iOS-Wrapper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2CA67D941DA8B74E0093B7F6 /* Bargent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CA67DC01DA8B74F0093B7F6 /* Build configuration list for PBXNativeTarget "Bargent" */;
+			buildPhases = (
+				2CA67D911DA8B74E0093B7F6 /* Sources */,
+				2CA67D921DA8B74E0093B7F6 /* Frameworks */,
+				2CA67D931DA8B74E0093B7F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bargent;
+			productName = Bargent;
+			productReference = 2CA67D951DA8B74E0093B7F6 /* Bargent.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2CA67DA71DA8B74F0093B7F6 /* BargentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CA67DC11DA8B74F0093B7F6 /* Build configuration list for PBXNativeTarget "BargentTests" */;
+			buildPhases = (
+				2CA67DA41DA8B74F0093B7F6 /* Sources */,
+				2CA67DA51DA8B74F0093B7F6 /* Frameworks */,
+				2CA67DA61DA8B74F0093B7F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CA67DAA1DA8B74F0093B7F6 /* PBXTargetDependency */,
+			);
+			name = BargentTests;
+			productName = BargentTests;
+			productReference = 2CA67DA81DA8B74F0093B7F6 /* BargentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2CA67DB21DA8B74F0093B7F6 /* BargentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CA67DC21DA8B74F0093B7F6 /* Build configuration list for PBXNativeTarget "BargentUITests" */;
+			buildPhases = (
+				2CA67DAF1DA8B74F0093B7F6 /* Sources */,
+				2CA67DB01DA8B74F0093B7F6 /* Frameworks */,
+				2CA67DB11DA8B74F0093B7F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CA67DB51DA8B74F0093B7F6 /* PBXTargetDependency */,
+			);
+			name = BargentUITests;
+			productName = BargentUITests;
+			productReference = 2CA67DB31DA8B74F0093B7F6 /* BargentUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B834EB0D1AE5BB5000379E11 /* NessieTestProj */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B834EB2A1AE5BB5000379E11 /* Build configuration list for PBXNativeTarget "NessieTestProj" */;
+			buildPhases = (
+				A4B405269EF1B3F49B4952A4 /* Check Pods Manifest.lock */,
+				B834EB0A1AE5BB5000379E11 /* Sources */,
+				B834EB0B1AE5BB5000379E11 /* Frameworks */,
+				B834EB0C1AE5BB5000379E11 /* Resources */,
+				CA21D163E547E1ADE39E1BFF /* Embed Pods Frameworks */,
+				37EDA3135788CEE28E0F0032 /* Copy Pods Resources */,
+				5B4B74EA1BB98A0600197534 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B4B74E91BB98A0600197534 /* PBXTargetDependency */,
+			);
+			name = NessieTestProj;
+			productName = NessieTestProj;
+			productReference = B834EB0E1AE5BB5000379E11 /* NessieTestProj.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B834EB211AE5BB5000379E11 /* NessieTestProjTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B834EB2D1AE5BB5000379E11 /* Build configuration list for PBXNativeTarget "NessieTestProjTests" */;
+			buildPhases = (
+				B834EB1E1AE5BB5000379E11 /* Sources */,
+				B834EB1F1AE5BB5000379E11 /* Frameworks */,
+				B834EB201AE5BB5000379E11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B834EB241AE5BB5000379E11 /* PBXTargetDependency */,
+			);
+			name = NessieTestProjTests;
+			productName = NessieTestProjTests;
+			productReference = B834EB221AE5BB5000379E11 /* NessieTestProjTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B8C549F01ACEE595002206AC /* Nessie-iOS-Wrapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8C54A071ACEE595002206AC /* Build configuration list for PBXNativeTarget "Nessie-iOS-Wrapper" */;
+			buildPhases = (
+				2EAC938343E6A30853EC0752 /* Check Pods Manifest.lock */,
+				B8C549EC1ACEE595002206AC /* Sources */,
+				B8C549ED1ACEE595002206AC /* Frameworks */,
+				B8C549EE1ACEE595002206AC /* Headers */,
+				B8C549EF1ACEE595002206AC /* Resources */,
+				F7D292F0C4AA06F3A7898A67 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nessie-iOS-Wrapper";
+			productName = "Nessie-iOS-Wrapper";
+			productReference = B8C549F11ACEE595002206AC /* NessieFmwk.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B8C549FB1ACEE595002206AC /* Nessie-iOS-WrapperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8C54A0A1ACEE595002206AC /* Build configuration list for PBXNativeTarget "Nessie-iOS-WrapperTests" */;
+			buildPhases = (
+				B8C549F81ACEE595002206AC /* Sources */,
+				B8C549F91ACEE595002206AC /* Frameworks */,
+				B8C549FA1ACEE595002206AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8C549FF1ACEE595002206AC /* PBXTargetDependency */,
+			);
+			name = "Nessie-iOS-WrapperTests";
+			productName = "Nessie-iOS-WrapperTests";
+			productReference = B8C549FC1ACEE595002206AC /* Nessie-iOS-WrapperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8C549E81ACEE595002206AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Nessie;
+				TargetAttributes = {
+					2CA67D941DA8B74E0093B7F6 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					2CA67DA71DA8B74F0093B7F6 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 2CA67D941DA8B74E0093B7F6;
+					};
+					2CA67DB21DA8B74F0093B7F6 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 2CA67D941DA8B74E0093B7F6;
+					};
+					B834EB0D1AE5BB5000379E11 = {
+						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0800;
+					};
+					B834EB211AE5BB5000379E11 = {
+						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0800;
+						TestTargetID = B834EB0D1AE5BB5000379E11;
+					};
+					B8C549F01ACEE595002206AC = {
+						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0800;
+					};
+					B8C549FB1ACEE595002206AC = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = B8C549EB1ACEE595002206AC /* Build configuration list for PBXProject "Nessie-iOS-Wrapper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B8C549E71ACEE595002206AC;
+			productRefGroup = B8C549F21ACEE595002206AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8C549F01ACEE595002206AC /* Nessie-iOS-Wrapper */,
+				B8C549FB1ACEE595002206AC /* Nessie-iOS-WrapperTests */,
+				B834EB0D1AE5BB5000379E11 /* NessieTestProj */,
+				B834EB211AE5BB5000379E11 /* NessieTestProjTests */,
+				2CA67D941DA8B74E0093B7F6 /* Bargent */,
+				2CA67DA71DA8B74F0093B7F6 /* BargentTests */,
+				2CA67DB21DA8B74F0093B7F6 /* BargentUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CA67D931DA8B74E0093B7F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA67DA21DA8B74F0093B7F6 /* LaunchScreen.storyboard in Resources */,
+				2CA67D9F1DA8B74F0093B7F6 /* Assets.xcassets in Resources */,
+				2CA67D9D1DA8B74E0093B7F6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA67DA61DA8B74F0093B7F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA67DB11DA8B74F0093B7F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B834EB0C1AE5BB5000379E11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B834EB181AE5BB5000379E11 /* Main.storyboard in Resources */,
+				B834EB1D1AE5BB5000379E11 /* LaunchScreen.xib in Resources */,
+				B834EB1A1AE5BB5000379E11 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B834EB201AE5BB5000379E11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C549EF1ACEE595002206AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C549FA1ACEE595002206AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EAC938343E6A30853EC0752 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		37EDA3135788CEE28E0F0032 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NessieTestProj/Pods-NessieTestProj-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4B405269EF1B3F49B4952A4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CA21D163E547E1ADE39E1BFF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NessieTestProj/Pods-NessieTestProj-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7D292F0C4AA06F3A7898A67 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nessie-iOS-Wrapper/Pods-Nessie-iOS-Wrapper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CA67D911DA8B74E0093B7F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA67D9A1DA8B74E0093B7F6 /* ViewController.swift in Sources */,
+				2CA67D981DA8B74E0093B7F6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA67DA41DA8B74F0093B7F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA67DAD1DA8B74F0093B7F6 /* BargentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA67DAF1DA8B74F0093B7F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA67DB81DA8B74F0093B7F6 /* BargentUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B834EB0A1AE5BB5000379E11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BF0FEA01D8C675700223ED4 /* TabViewController.swift in Sources */,
+				B834EB151AE5BB5000379E11 /* ViewController.swift in Sources */,
+				B834EB131AE5BB5000379E11 /* AppDelegate.swift in Sources */,
+				5BF0FEA21D8C676900223ED4 /* SecondViewController.swift in Sources */,
+				B86E4A7F1B0BD6EF0076A6D0 /* NSEFunctionalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B834EB1E1AE5BB5000379E11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B834EB291AE5BB5000379E11 /* NessieTestProjTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C549EC1ACEE595002206AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B85401A61B0AE49500031001 /* Withdrawal.swift in Sources */,
+				B8C54A0E1ACEE5A6002206AC /* NSEClient.swift in Sources */,
+				B8411CAC1AF9706B00047389 /* ATM.swift in Sources */,
+				B85401A41B0A895400031001 /* Deposit.swift in Sources */,
+				B81D5BC31B0A87470086B2C6 /* Customer.swift in Sources */,
+				5BF9F35E1B98A90E000D2D4D /* Purchase.swift in Sources */,
+				B834EB091AE5AAEA00379E11 /* Account.swift in Sources */,
+				B86E4A7D1B0BD3C00076A6D0 /* EnterpriseRequests.swift in Sources */,
+				B8411CB01AF97C3800047389 /* Bill.swift in Sources */,
+				B8411CAE1AF9750100047389 /* Address.swift in Sources */,
+				B8411CB21AF97C4000047389 /* Branch.swift in Sources */,
+				5BB790541B9670A800488749 /* Merchant.swift in Sources */,
+				5BF9F35C1B98A902000D2D4D /* Transfer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C549F81ACEE595002206AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C54A041ACEE595002206AC /* Nessie_iOS_WrapperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CA67DAA1DA8B74F0093B7F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CA67D941DA8B74E0093B7F6 /* Bargent */;
+			targetProxy = 2CA67DA91DA8B74F0093B7F6 /* PBXContainerItemProxy */;
+		};
+		2CA67DB51DA8B74F0093B7F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CA67D941DA8B74E0093B7F6 /* Bargent */;
+			targetProxy = 2CA67DB41DA8B74F0093B7F6 /* PBXContainerItemProxy */;
+		};
+		5B4B74E91BB98A0600197534 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C549F01ACEE595002206AC /* Nessie-iOS-Wrapper */;
+			targetProxy = 5B4B74E81BB98A0600197534 /* PBXContainerItemProxy */;
+		};
+		B834EB241AE5BB5000379E11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B834EB0D1AE5BB5000379E11 /* NessieTestProj */;
+			targetProxy = B834EB231AE5BB5000379E11 /* PBXContainerItemProxy */;
+		};
+		B8C549FF1ACEE595002206AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C549F01ACEE595002206AC /* Nessie-iOS-Wrapper */;
+			targetProxy = B8C549FE1ACEE595002206AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2CA67D9B1DA8B74E0093B7F6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CA67D9C1DA8B74E0093B7F6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2CA67DA01DA8B74F0093B7F6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CA67DA11DA8B74F0093B7F6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B834EB161AE5BB5000379E11 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B834EB171AE5BB5000379E11 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B834EB1B1AE5BB5000379E11 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B834EB1C1AE5BB5000379E11 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CA67DBA1DA8B74F0093B7F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = Bargent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.Bargent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2CA67DBB1DA8B74F0093B7F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = Bargent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.Bargent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2CA67DBC1DA8B74F0093B7F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = BargentTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.BargentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bargent.app/Bargent";
+			};
+			name = Debug;
+		};
+		2CA67DBD1DA8B74F0093B7F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = BargentTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.BargentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bargent.app/Bargent";
+			};
+			name = Release;
+		};
+		2CA67DBE1DA8B74F0093B7F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = BargentUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.BargentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Bargent;
+			};
+			name = Debug;
+		};
+		2CA67DBF1DA8B74F0093B7F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = BargentUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.BargentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Bargent;
+			};
+			name = Release;
+		};
+		B834EB2B1AE5BB5000379E11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD131C9BC59CF05889A291E7 /* Pods-NessieTestProj.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NessieTestProj/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		B834EB2C1AE5BB5000379E11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B4FB38B5F365A889DDFFCAD /* Pods-NessieTestProj.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = NessieTestProj/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
+		B834EB2E1AE5BB5000379E11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NessieTestProjTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NessieTestProj.app/NessieTestProj";
+			};
+			name = Debug;
+		};
+		B834EB2F1AE5BB5000379E11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NessieTestProjTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NessieTestProj.app/NessieTestProj";
+			};
+			name = Release;
+		};
+		B8C54A051ACEE595002206AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B8C54A061ACEE595002206AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B8C54A081ACEE595002206AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56A7A45AD1C469B89D0C6FE9 /* Pods-Nessie-iOS-Wrapper.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Nessie-iOS-Wrapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = NessieFmwk;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		B8C54A091ACEE595002206AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57C2E31B0FA56AC94DDD7A50 /* Pods-Nessie-iOS-Wrapper.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Nessie-iOS-Wrapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = NessieFmwk;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
+		B8C54A0B1ACEE595002206AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Nessie-iOS-WrapperTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B8C54A0C1ACEE595002206AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Nessie-iOS-WrapperTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CA67DC01DA8B74F0093B7F6 /* Build configuration list for PBXNativeTarget "Bargent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CA67DBA1DA8B74F0093B7F6 /* Debug */,
+				2CA67DBB1DA8B74F0093B7F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2CA67DC11DA8B74F0093B7F6 /* Build configuration list for PBXNativeTarget "BargentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CA67DBC1DA8B74F0093B7F6 /* Debug */,
+				2CA67DBD1DA8B74F0093B7F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2CA67DC21DA8B74F0093B7F6 /* Build configuration list for PBXNativeTarget "BargentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CA67DBE1DA8B74F0093B7F6 /* Debug */,
+				2CA67DBF1DA8B74F0093B7F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B834EB2A1AE5BB5000379E11 /* Build configuration list for PBXNativeTarget "NessieTestProj" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B834EB2B1AE5BB5000379E11 /* Debug */,
+				B834EB2C1AE5BB5000379E11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B834EB2D1AE5BB5000379E11 /* Build configuration list for PBXNativeTarget "NessieTestProjTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B834EB2E1AE5BB5000379E11 /* Debug */,
+				B834EB2F1AE5BB5000379E11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8C549EB1ACEE595002206AC /* Build configuration list for PBXProject "Nessie-iOS-Wrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8C54A051ACEE595002206AC /* Debug */,
+				B8C54A061ACEE595002206AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8C54A071ACEE595002206AC /* Build configuration list for PBXNativeTarget "Nessie-iOS-Wrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8C54A081ACEE595002206AC /* Debug */,
+				B8C54A091ACEE595002206AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8C54A0A1ACEE595002206AC /* Build configuration list for PBXNativeTarget "Nessie-iOS-WrapperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8C54A0B1ACEE595002206AC /* Debug */,
+				B8C54A0C1ACEE595002206AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B8C549E81ACEE595002206AC /* Project object */;
+}

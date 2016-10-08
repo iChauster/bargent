@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/hbg687/Downloads/nessie-ios-wrapper-master/Nessie-iOS-Wrapper/build/Debug-iphoneos/Pods-Nessie-iOS-WrapperTests/SwiftyJSON.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/hbg687/Downloads/nessie-ios-wrapper-master/Nessie-iOS-Wrapper/build/Pods.build/Debug-iphoneos/Pods-Nessie-iOS-WrapperTests-SwiftyJSON.build/unextended-module.modulemap',
+    }]
+  }]
+}
