@@ -1,6 +1,5 @@
 var express = require('express');
 var request = require('superagent');
-
 var app = express.Router();
 
 /* GET home page. */
@@ -16,10 +15,21 @@ app.post('/getExpenseData', function (req,res){
 		console.log(obj + "===========");
 		console.log("\n amount : "+ obj.amount + "\n description : " + obj.description + "\n merchant : " + obj.merchant + "\n type : " + obj.type);
 		// you need to request to find the merchant's name and category through the id
+		if(!c[obj.merchant]){
+			c[obj.merchant] = obj.amount;
+		}else{
+			c[obj.merchant] += obj.amount;
+		} 
 		totalAmount += obj.amount;
+		for (k in c) {
+			if (k)
+ 				Merchant.getMerchant(k,function(res){
+ 					console.log(res);
+ 				});
+		}
 	}
 	array.sort(priceCompare)
-	console.log(array);
+	console.log(array.reverse());
 	res.end('ok');
 });
 function priceCompare(a,b){
@@ -32,37 +42,10 @@ function priceCompare(a,b){
 	}
 }
 
-var array = [ { amount: 5,
-    description: 'Description',
-    merchant: '57f895e7360f81f104543bdb',
-    type: 'merchant' },
-  { amount: 10.0,
-    description: 'Description',
-    merchant: '57f895e7360f81f104543bdb',
-    type: 'merchant' },
-  { amount: 4.5,
-    description: 'Description',
-    merchant: '57f895e7360f81f104543bdb',
-    type: 'merchant' } ]
-    var totalAmount = 0;
-    var c = {};
-	for (a in array){
-		var obj = array[a];
-		console.log(obj + "===========");
-		console.log("\n amount : "+ obj.amount + "\n description : " + obj.description + "\n merchant : " + obj.merchant + "\n type : " + obj.type);
-		// you need to request to find the merchant's name and category through the id
-		if(!c[obj.merchant]){
-			c[obj.merchant] = obj.amount;
-		}else{
-			c[obj.merchant] += obj.amount;
-		} 
-		totalAmount += obj.amount;
-	}
 	console.log(c);
 	console.log(array);
 	console.log(totalAmount)
-	array.sort(priceCompare)
-	console.log(array.reverse());
+	
 	
 	var apiKey = "d914174469cc843bb832513eda8b644b";
  var ob =  {
@@ -167,12 +150,7 @@ var Merchant = (function() {
     return Merchant;
 
 })();
-for (k in c) {
-	if (k)
- 		Merchant.getMerchant(k,function(res){
- 			console.log(res);
- 		});
-}	
+	
 
 
 module.exports = app;
