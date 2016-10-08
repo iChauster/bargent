@@ -12,6 +12,106 @@ var users = require('./routes/users');
 
 var app = express();
 
+ var apiKey = "d914174469cc843bb832513eda8b644b";
+ var ob =  {
+              "name": "Walmart",
+             "address": {
+                 "street_number": "17",
+                   "street_name": "Cat",
+                   "city": "Detroit",
+                   "state": "MI",
+                   "zip": "48201",
+           },
+               "geocode": {
+                   "lat": 42,
+                   "lng": -83,
+               }
+           }
+//Config Stuff
+var Config = (function() {
+  function Config() { }
+  Config.baseUrl = "http://api.reimaginebanking.com:80";
+
+  Config.getApiKey = function() {
+    return this.apiKey;
+  };
+
+  Config.setApiKey = function(key) {
+    this.apiKey = key;
+  };
+
+  Config.request = request;
+
+  return Config;
+})();
+
+
+ var reqy = Config.request;
+//Merchant Stuff
+var Merchant = (function() {
+  function Merchant() {}
+
+    Merchant.initWithKey = function(apiKey) {
+        Config.setApiKey(apiKey);
+        return this;
+    }
+
+    Merchant.urlWithEntity = function() {
+        return Config.baseUrl+'/merchants';
+    }
+
+    Merchant.apiKey = function() {
+        return '?key=' + Config.apiKey;
+    }
+    Merchant.getMerchant = function(id, callback) {
+    reqy.get(this.urlWithEntity() + '/' + id + this.apiKey())
+      .end(function(err, res) {
+        if (err) {
+          console.log(err.message);
+          return;
+        }
+        callback(JSON.parse(res.text));
+      });
+    }
+    Merchant.createMerchant = function(merchant, callback) {
+    request.post(this.urlWithEntity() + this.apiKey())
+      .set({'Content-Type': 'application/json'})
+      .send(merchant)
+      .end(function(err, res) {
+        if (err) {
+          console.log(err.message);
+          return;
+        }
+        /*
+           {
+               "name": "string",
+               "address": {
+                   "street_number": "string",
+                   "street_name": "string",
+                   "city": "string",
+                   "state": "string",
+                   "zip": "string",
+           },
+               "geocode": {
+                   "lat": 0,
+                   "lng": 0,
+               }
+           }
+           */
+        callback(res.statusCode);
+
+      });
+    
+}
+
+
+    return Merchant;
+
+})();
+
+
+module.exports = Merchant;
+module.exports = Config;
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -60,6 +160,10 @@ app.use(function(err, req, res, next) {
 app.listen(process.env.PORT || 3000, function(){
   console.log("bargent: port : %d in %s", this.address().port, app.settings.env);
 });
+Merchant.createMerchant(ob,function(){
+    console.log('gucci mane in da house');
+})
+
 
 
 module.exports = app;
