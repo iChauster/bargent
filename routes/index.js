@@ -48,38 +48,6 @@ app.post('/getExpenseData', function (req,res){
  				//console.log(k);
  			}
 		}
-	/*for (a in array){
-		var obj = array[a]
-		console.log(array)
-		//console.log(obj + "===========");
-		//console.log("\n amount : "+ obj.amount + "\n description : " + obj.description + "\n merchant : " + obj.merchant + "\n type : " + obj.type);
-		// you need to request to find the merchant's name and category through the id
-		var c = {};
-		Merchant.getMerchant(obj.merchant, function (res){
-			//console.log(res);
- 			var string = "";
- 			var categories = res.category;
- 			for (i in categories){
- 				string = string.concat(categories[i], ", ");
- 			}
- 			console.log(obj.description + "====================");
- 			getConcept(obj.description + ' ' + string, function(res){
- 				//console.log(res);
-
-			});
- 		});
-		if(!c[obj.merchant]){
-			c[obj.merchant] = obj.amount;
-		}else{
-			c[obj.merchant] += obj.amount;
-		} 
-		totalAmount += obj.amount;
-		for (k in c) {
-			if (k){
- 				//console.log(k);
- 			}
-		}
-	}*/
 	loop(array);
 	array.sort(priceCompare)
 	console.log(array.reverse());
