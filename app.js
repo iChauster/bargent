@@ -114,7 +114,6 @@ var Merchant = (function() {
     return Merchant;
 
 })();
-var merch = Merchant()
 
 module.exports = Merchant;
 module.exports = Config;
@@ -166,9 +165,9 @@ app.use(function(err, req, res, next) {
 app.listen(process.env.PORT || 3000, function(){
   console.log("bargent: port : %d in %s", this.address().port, app.settings.env);
 });
-Merchant.createMerchant(ob,function(){
+/*Merchant.createMerchant(ob,function(){
     console.log('gucci mane in da house');
-})
+})*/
 
 
 

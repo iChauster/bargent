@@ -9,11 +9,13 @@
 import UIKit
 import NessieFmwk
 
+private let reuseIdentifier = "BargentCell"
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
+    @IBOutlet weak var collectionView : UICollectionView!
     let client = NSEClient.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         client.setKey("d914174469cc843bb832513eda8b644b")
         self.testGetAccounts()
         testGetAllPurchasesFromAccount()
@@ -119,8 +121,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1;
     }
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2;
+    }
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+        
+        // Configure the cell
+        
+        return cell
     }
   /*  func testGetAccount(accountId: String) {
         AccountRequest().getAccount(accountId, completion:{(response, error) in
