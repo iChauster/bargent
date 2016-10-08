@@ -27,10 +27,13 @@ app.post('/getExpenseData', function (req,res){
  			}
  			console.log(arr[a].description + "====================" + a);
  			getConcept(arr[a].description + ' ' + string, function(res){
- 				console.log(res);
+ 				arr[a].category = JSON.parse(res).concepts[0].text;
+ 				console.log(arr[a].category);
  				a ++;
  				if(a < arr.length){
  					loop(arr)
+ 				}else{
+ 					end();
  				}
 
 			});
@@ -48,10 +51,13 @@ app.post('/getExpenseData', function (req,res){
  				//console.log(k);
  			}
 		}
-	loop(array);
-	array.sort(priceCompare)
-	console.log(array.reverse());
-	res.send(JSON.stringify(array.reverse()));
+		loop(array)
+		var end = function(){
+			console.log(end);
+			array.sort(priceCompare)
+			console.log(array.reverse());
+			res.send(JSON.stringify(array.reverse()));
+		}
 });
 function getConcept(textInContext, callback) {
 	var parameters = {
