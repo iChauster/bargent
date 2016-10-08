@@ -7,6 +7,7 @@ html, body {
 	height: 100%;
 	display: table;
 	background: #FF6E40;
+	position: absolute;
 }
 .nest{
 	display: table-cell;
