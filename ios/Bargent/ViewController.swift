@@ -10,12 +10,10 @@ import UIKit
 import NessieFmwk
 
 private let reuseIdentifier = "BargentCell"
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    @IBOutlet weak var collectionView : UICollectionView!
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     let client = NSEClient.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         client.setKey("d914174469cc843bb832513eda8b644b")
         self.testGetAccounts()
         testGetAllPurchasesFromAccount()
@@ -102,6 +100,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 } else {
                     let httpResponse = response as? NSHTTPURLResponse
                     print(httpResponse)
+                    tr
                 }
             })
             
@@ -111,25 +110,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             print("parsing error")
         }
     }
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("BargentCell") as! BargentTableViewCell
-        cell.view.backgroundColor = UIColor.redColor()
-        cell.merchant.text = "Walmart"
-        cell.percentageIncrease.text = "26%"
-        return cell;
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3;
     }
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1;
     }
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2;
-    }
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
-        
-        // Configure the cell
-        
-        return cell
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("BargentCell")
+        return cell!;
     }
   /*  func testGetAccount(accountId: String) {
         AccountRequest().getAccount(accountId, completion:{(response, error) in

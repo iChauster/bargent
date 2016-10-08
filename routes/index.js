@@ -15,6 +15,7 @@ app.post('/getExpenseData', function (req,res){
 		console.log(obj + "===========");
 		console.log("\n amount : "+ obj.amount + "\n description : " + obj.description + "\n merchant : " + obj.merchant + "\n type : " + obj.type);
 		// you need to request to find the merchant's name and category through the id
+		var c = {};
 		if(!c[obj.merchant]){
 			c[obj.merchant] = obj.amount;
 		}else{
@@ -30,7 +31,7 @@ app.post('/getExpenseData', function (req,res){
 	}
 	array.sort(priceCompare)
 	console.log(array.reverse());
-	res.end('ok');
+	res.send(JSON.stringify(array.reverse()));
 });
 function priceCompare(a,b){
 	if(a.amount > b.amount){
@@ -41,11 +42,6 @@ function priceCompare(a,b){
 		return 0;
 	}
 }
-
-	console.log(c);
-	console.log(array);
-	console.log(totalAmount)
-	
 	
 	var apiKey = "d914174469cc843bb832513eda8b644b";
  var ob =  {
