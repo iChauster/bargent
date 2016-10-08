@@ -23,6 +23,10 @@ target 'Bargent' do
 
 end
 
+target 'BargentTests' do
+
+end
+
 target 'NessieTestProjTests' do
 
 end

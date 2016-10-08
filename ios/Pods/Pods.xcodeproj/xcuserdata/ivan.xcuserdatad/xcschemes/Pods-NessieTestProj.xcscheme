@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDA5B99F12ED9087CB6798DB"
+               BlueprintIdentifier = "B110F0CF8DC7EF365F8C0F10792E3F47"
                BuildableName = "Pods_NessieTestProj.framework"
                BlueprintName = "Pods-NessieTestProj"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDA5B99F12ED9087CB6798DB"
+            BlueprintIdentifier = "B110F0CF8DC7EF365F8C0F10792E3F47"
             BuildableName = "Pods_NessieTestProj.framework"
             BlueprintName = "Pods-NessieTestProj"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FDA5B99F12ED9087CB6798DB"
-            BuildableName = "Pods_NessieTestProj.framework"
-            BlueprintName = "Pods-NessieTestProj"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -4,45 +4,75 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Nessie-iOS-Wrapper-SwiftyJSON.xcscheme</key>
+		<key>Pods-Bargent.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-BargentTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Nessie-iOS-Wrapper.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>Pods-NessieTestProj-SwiftyJSON.xcscheme</key>
+		<key>Pods-Nessie-iOS-WrapperTests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-NessieTestProj.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-NessieTestProjTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>417D083BDF7A8B8CFDC74AB1</key>
+		<key>121A1D006C014759E75DEDE9D0927E4C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A51F14B7B759D583AC83E01F</key>
+		<key>12FCBCA9A43FFCCBF939C326C3A7ABC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B1E68861E6A0151730E49E72</key>
+		<key>5BD812F1551BD777BE67EB1F46D4A2A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FDA5B99F12ED9087CB6798DB</key>
+		<key>AE194AD21734AE55C9FDC2E4D471B848</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AEB27263B91216AFE06A4FE54F681152</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B110F0CF8DC7EF365F8C0F10792E3F47</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DF82842B7493237632C86FFCA596A879</key>
 		<dict>
 			<key>primary</key>
 			<true/>

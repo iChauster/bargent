@@ -11,51 +11,25 @@ import NessieFmwk
 
 class ViewController: UIViewController {
 
+    let client = NSEClient.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
-        testPostCustomer()
+        client.setKey("d914174469cc843bb832513eda8b644b")
+        self.testGetAccounts()
+        testGetAllPurchasesFromAccount()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    func testPostCustomer() {
-        // construct the Customer object you want to create
-        // in this case, address is an object so it needs its own initializer
-        let address = Address(streetName: "Street", streetNumber: "1", city: "City", state: "VA", zipCode: "12345")
-        let customerToCreate = Customer(firstName: "Victor", lastName: "Lopez", address: address, customerId: "sup3rc00la1ph4num3r1cId")
+    func testGetAccounts() {
+        let accountType = AccountType.Savings
         
-        // send the request using the wrapper!
-        CustomerRequest().postCustomer(customerToCreate, completion:{(response, error) in
+        AccountRequest().getAccounts(accountType, completion:{(response, error) in
             if (error != nil) {
-                // handling the error. You could alternatively not have this block if you so choose
                 print(error)
             } else {
-                // map the response and determine how to use i
-                // in this case, we only print to console
-                let customerResponse = response as BaseResponse<Customer>?
-                let message = customerResponse?.message
-                let customerCreated = customerResponse?.object
-                print("\(message): \(customerCreated)")
-                self.testPutCustomer(customerCreated!)
-            }
-        })
-    }
-    func testGetCustomers() {
-        // Retrieve all the Customers!
-        CustomerRequest().getCustomers({(response, error) in
-            if (error != nil) {
-                // optionally handle the error here
-                print(error)
-            } else {
-                // we are expecting back an array of customers. Type check!
-                if let array = response as Array<Customer>? {
-                    // if there are Customers in the result, print the first Customer
+                if let array = response as Array<Account>? {
                     if array.count > 0 {
-                        let customer = array[0] as Customer?
-                        self.testGetCustomer(customer!.customerId)
+                        let account = array[0] as Account?
+                        print(account!.accountId)
                         print(array)
                     } else {
                         print("No accounts found")
@@ -64,21 +38,108 @@ class ViewController: UIViewController {
             }
         })
     }
-    func testGetCustomer(customerId: String) {
-        var request = EnterpriseCustomerRequest()
-        request.getCustomer(customerId){ (response, error) in
+    func testPostPurchase() {
+        let purchaseToCreate = Purchase(merchantId: "57f895e7360f81f104543bdb", status: .Cancelled, medium: .Balance, payerId: "57f8949c360f81f104543bd8", amount: 4.5, type: "merchant", purchaseDate: NSDate(), description: "Description", purchaseId: "asd")
+        PurchaseRequest().postPurchase(purchaseToCreate, accountId: "57f8949c360f81f104543bd8", completion:{(response, error) in
             if (error != nil) {
                 print(error)
             } else {
-                if (error != nil) {
-                    print(error)
-                } else {
-                    if let account = response as Customer? {
-                        print(account)
+                let purchaseResponse = response as BaseResponse<Purchase>?
+                let message = purchaseResponse?.message
+                let purchaseCreated = purchaseResponse?.object
+                print("\(message): \(purchaseCreated)")
+                //self.testPutPurchase(purchaseCreated!)
+            }
+        })
+    }
+    func testGetAllPurchasesFromAccount() {
+        PurchaseRequest().getPurchasesFromAccountId("57f8949c360f81f104543bd8", completion:{(response, error) in
+            if (error != nil) {
+                print(error)
+            } else {
+                if let array = response as Array<Purchase>? {
+                    if array.count > 0 {
+                        let purchase = array[0] as Purchase!
+                        print(array)
+                        for purchase in array {
+                            print(purchase.description, purchase.amount)
+                        }
+                        //self.testGetPurchase(purchase.purchaseId)
+                    } else {
+                        print("No purchases found")
                     }
                 }
             }
-        }
+        })
+    }
+  /*  func testGetAccount(accountId: String) {
+        AccountRequest().getAccount(accountId, completion:{(response, error) in
+            if (error != nil) {
+                print(error)
+            } else {
+                if let account = response as Account? {
+                    print(account)
+                    self.testGetCustomerAccounts(account.customerId)
+                }
+            }
+        })
+    }
+    func testGetCustomerAccounts(customerId: String) {
+        AccountRequest().getCustomerAccounts(customerId, completion:{(response, error) in
+            if (error != nil) {
+                print(error)
+            } else {
+                if let array = response as Array<Account>? {
+                    print(array)
+                    let account = array[0] as Account?
+                    self.testPostAccount(account!.customerId)
+                    self.testPutAccount(account!.accountId, nickname: "New nickname", accountNumber: "0987654321123456")
+                }
+            }
+        })
+    }
+    func testPostAccount(customerId: String) {
+        let accountType = AccountType.Savings
+        let accountToCreate = Account(accountId: "", accountType:accountType, nickname: "Hola", rewards: 10, balance: 100, accountNumber: "1234567890123456", customerId: customerId)
+        AccountRequest().postAccount(accountToCreate, completion:{(response, error) in
+            if (error != nil) {
+                print(error)
+            } else {
+                let accountResponse = response as BaseResponse<Account>?
+                let message = accountResponse?.message
+                let accountCreated = accountResponse?.object
+                print("\(message): \(accountCreated)")
+            }
+        })
+    }
+    
+    func testPutAccount(accountId: String, nickname: String, accountNumber: String?) {
+        AccountRequest().putAccount(accountId, nickname: nickname, accountNumber: accountNumber, completion:{(response, error) in
+            if (error != nil) {
+                print(error)
+            } else {
+                let accountResponse = response as BaseResponse<Account>?
+                let message = accountResponse?.message
+                let accountCreated = accountResponse?.object
+                print("\(message): \(accountCreated)")
+            }
+        })
+    }
+    
+    func testPostCustomer() {
+        let address = Address(streetName: "Street", streetNumber: "1", city: "City", state: "VA", zipCode: "12345")
+        let customerToCreate = Customer(firstName: "Ivan", lastName: "Chau", address: address, customerId: "skjdfhskdjghskjdgh")
+        CustomerRequest().postCustomer(customerToCreate, completion:{(response, error) in
+            if (error != nil) {
+                print(error)
+            } else {
+                let customerResponse = response as BaseResponse<Customer>?
+                let message = customerResponse?.message
+                let customerCreated = customerResponse?.object
+                print("\(message): \(customerCreated)")
+                self.testPutCustomer(customerCreated!)
+            }
+        })
     }
     func testPutCustomer(customerToBeModified: Customer) {
         customerToBeModified.firstName = "Raul"
@@ -92,8 +153,7 @@ class ViewController: UIViewController {
                 print("\(message): \(accountCreated)")
             }
         })
-    }
-
+    }*/
 
 
 }

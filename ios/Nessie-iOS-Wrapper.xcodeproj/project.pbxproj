@@ -16,6 +16,7 @@
 		2CA67DB81DA8B74F0093B7F6 /* BargentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA67DB71DA8B74F0093B7F6 /* BargentUITests.swift */; };
 		2CA67DC41DA8BFA00093B7F6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA67DC31DA8BFA00093B7F6 /* SwiftyJSON.framework */; };
 		2CA67DC51DA8C00C0093B7F6 /* NessieFmwk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C549F11ACEE595002206AC /* NessieFmwk.framework */; };
+		366D7F1DD1A7973F39129E87 /* Pods_Nessie_iOS_Wrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A13A31AF6311A44FC89273 /* Pods_Nessie_iOS_Wrapper.framework */; };
 		5B4B74E61BB98A0600197534 /* NessieFmwk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C549F11ACEE595002206AC /* NessieFmwk.framework */; };
 		5B4B74E71BB98A0600197534 /* NessieFmwk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8C549F11ACEE595002206AC /* NessieFmwk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5BB790541B9670A800488749 /* Merchant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB790531B9670A800488749 /* Merchant.swift */; };
@@ -23,6 +24,10 @@
 		5BF0FEA21D8C676900223ED4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0FEA11D8C676900223ED4 /* SecondViewController.swift */; };
 		5BF9F35C1B98A902000D2D4D /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9F35B1B98A902000D2D4D /* Transfer.swift */; };
 		5BF9F35E1B98A90E000D2D4D /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9F35D1B98A90E000D2D4D /* Purchase.swift */; };
+		6479DC640AB02F6C6C6E9C66 /* Pods_Nessie_iOS_WrapperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789115495DBC3AEA4AEDA6E0 /* Pods_Nessie_iOS_WrapperTests.framework */; };
+		86F85B37A557C1A877308B2C /* Pods_NessieTestProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E382CB411DC6D97057B19F /* Pods_NessieTestProj.framework */; };
+		87BD27AA4E826B58CCA75F98 /* Pods_Bargent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959FE9A3928534B07DC6A6C3 /* Pods_Bargent.framework */; };
+		8931FB12E413D8219A686D31 /* Pods_BargentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EF8A697F6B2F7518D5B5569 /* Pods_BargentTests.framework */; };
 		B81D5BC31B0A87470086B2C6 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81D5BC21B0A87470086B2C6 /* Customer.swift */; };
 		B834EB091AE5AAEA00379E11 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834EB081AE5AAEA00379E11 /* Account.swift */; };
 		B834EB131AE5BB5000379E11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834EB121AE5BB5000379E11 /* AppDelegate.swift */; };
@@ -44,8 +49,7 @@
 		B8C549FD1ACEE595002206AC /* NessieFmwk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C549F11ACEE595002206AC /* NessieFmwk.framework */; };
 		B8C54A041ACEE595002206AC /* Nessie_iOS_WrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C54A031ACEE595002206AC /* Nessie_iOS_WrapperTests.swift */; };
 		B8C54A0E1ACEE5A6002206AC /* NSEClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C54A0D1ACEE5A6002206AC /* NSEClient.swift */; };
-		EADC8342DB705A16CD0268A1 /* Pods_Nessie_iOS_Wrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4043BC7A9BA047A099E40B47 /* Pods_Nessie_iOS_Wrapper.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F9CEE15C5FE77CBF8EA941DF /* Pods_NessieTestProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE40FF841192D654BF4C793 /* Pods_NessieTestProj.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F75292234BE7E1426A37F862 /* Pods_NessieTestProjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D820C47D8E1E39418F929278 /* Pods_NessieTestProjTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +105,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		049B364CCFB8A3CEFAAEA06C /* Pods-Bargent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bargent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bargent/Pods-Bargent.debug.xcconfig"; sourceTree = "<group>"; };
 		2CA67D951DA8B74E0093B7F6 /* Bargent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bargent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA67D971DA8B74E0093B7F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CA67D991DA8B74E0093B7F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,16 +120,22 @@
 		2CA67DB71DA8B74F0093B7F6 /* BargentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BargentUITests.swift; sourceTree = "<group>"; };
 		2CA67DB91DA8B74F0093B7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA67DC31DA8BFA00093B7F6 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/Nessie-iOS-Wrapper-adczflazfnqhuogelqbwqwrbrijb/Build/Products/Debug-iphonesimulator/Pods-Nessie-iOS-Wrapper/SwiftyJSON.framework"; sourceTree = "<group>"; };
-		4043BC7A9BA047A099E40B47 /* Pods_Nessie_iOS_Wrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nessie_iOS_Wrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		56A7A45AD1C469B89D0C6FE9 /* Pods-Nessie-iOS-Wrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nessie-iOS-Wrapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nessie-iOS-Wrapper/Pods-Nessie-iOS-Wrapper.debug.xcconfig"; sourceTree = "<group>"; };
-		57C2E31B0FA56AC94DDD7A50 /* Pods-Nessie-iOS-Wrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nessie-iOS-Wrapper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nessie-iOS-Wrapper/Pods-Nessie-iOS-Wrapper.release.xcconfig"; sourceTree = "<group>"; };
-		5B4FB38B5F365A889DDFFCAD /* Pods-NessieTestProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NessieTestProj.release.xcconfig"; path = "Pods/Target Support Files/Pods-NessieTestProj/Pods-NessieTestProj.release.xcconfig"; sourceTree = "<group>"; };
+		40E382CB411DC6D97057B19F /* Pods_NessieTestProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NessieTestProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB790531B9670A800488749 /* Merchant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Merchant.swift; sourceTree = "<group>"; };
 		5BF0FE9F1D8C675700223ED4 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		5BF0FEA11D8C676900223ED4 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		5BF9F35B1B98A902000D2D4D /* Transfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		5BF9F35D1B98A90E000D2D4D /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
-		8BE40FF841192D654BF4C793 /* Pods_NessieTestProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NessieTestProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BFF42B96B47C93EF1201D59 /* Pods-NessieTestProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NessieTestProj.release.xcconfig"; path = "Pods/Target Support Files/Pods-NessieTestProj/Pods-NessieTestProj.release.xcconfig"; sourceTree = "<group>"; };
+		789115495DBC3AEA4AEDA6E0 /* Pods_Nessie_iOS_WrapperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nessie_iOS_WrapperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79C36EDDA93CA9008E801DDB /* Pods-NessieTestProjTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NessieTestProjTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NessieTestProjTests/Pods-NessieTestProjTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8379AD796A2074CAF29129AB /* Pods-BargentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BargentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BargentTests/Pods-BargentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		88A13A31AF6311A44FC89273 /* Pods_Nessie_iOS_Wrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nessie_iOS_Wrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CFD6F6A9172FCF520FEDB23 /* Pods-Nessie-iOS-Wrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nessie-iOS-Wrapper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nessie-iOS-Wrapper/Pods-Nessie-iOS-Wrapper.release.xcconfig"; sourceTree = "<group>"; };
+		959FE9A3928534B07DC6A6C3 /* Pods_Bargent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bargent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EF8A697F6B2F7518D5B5569 /* Pods_BargentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BargentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5F828AF8AD6EDD46CA824A4 /* Pods-NessieTestProjTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NessieTestProjTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NessieTestProjTests/Pods-NessieTestProjTests.release.xcconfig"; sourceTree = "<group>"; };
+		B1C59D9AA026D82FCABB4982 /* Pods-Bargent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bargent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bargent/Pods-Bargent.release.xcconfig"; sourceTree = "<group>"; };
 		B81D5BC21B0A87470086B2C6 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		B834EB081AE5AAEA00379E11 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		B834EB0E1AE5BB5000379E11 /* NessieTestProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NessieTestProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,7 +163,12 @@
 		B8C54A021ACEE595002206AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8C54A031ACEE595002206AC /* Nessie_iOS_WrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nessie_iOS_WrapperTests.swift; sourceTree = "<group>"; };
 		B8C54A0D1ACEE5A6002206AC /* NSEClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSEClient.swift; sourceTree = "<group>"; };
-		CD131C9BC59CF05889A291E7 /* Pods-NessieTestProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NessieTestProj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NessieTestProj/Pods-NessieTestProj.debug.xcconfig"; sourceTree = "<group>"; };
+		BA3F3EE2D6488BC6C92D74B5 /* Pods-Nessie-iOS-WrapperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nessie-iOS-WrapperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nessie-iOS-WrapperTests/Pods-Nessie-iOS-WrapperTests.release.xcconfig"; sourceTree = "<group>"; };
+		BB5E060ED3D16158836905D8 /* Pods-Nessie-iOS-Wrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nessie-iOS-Wrapper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nessie-iOS-Wrapper/Pods-Nessie-iOS-Wrapper.debug.xcconfig"; sourceTree = "<group>"; };
+		D820C47D8E1E39418F929278 /* Pods_NessieTestProjTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NessieTestProjTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE5C4C1276A1AFA153A501E /* Pods-Nessie-iOS-WrapperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nessie-iOS-WrapperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nessie-iOS-WrapperTests/Pods-Nessie-iOS-WrapperTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E47B1DE6C19CFF40637C1527 /* Pods-NessieTestProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NessieTestProj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NessieTestProj/Pods-NessieTestProj.debug.xcconfig"; sourceTree = "<group>"; };
+		F70678CCAA99038F0E29B247 /* Pods-BargentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BargentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BargentTests/Pods-BargentTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +178,7 @@
 			files = (
 				2CA67DC51DA8C00C0093B7F6 /* NessieFmwk.framework in Frameworks */,
 				2CA67DC41DA8BFA00093B7F6 /* SwiftyJSON.framework in Frameworks */,
+				87BD27AA4E826B58CCA75F98 /* Pods_Bargent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8931FB12E413D8219A686D31 /* Pods_BargentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +203,7 @@
 			files = (
 				5B4B74E61BB98A0600197534 /* NessieFmwk.framework in Frameworks */,
 				B834EB301AE5BB9300379E11 /* NessieFmwk.framework in Frameworks */,
-				F9CEE15C5FE77CBF8EA941DF /* Pods_NessieTestProj.framework in Frameworks */,
+				86F85B37A557C1A877308B2C /* Pods_NessieTestProj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +211,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F75292234BE7E1426A37F862 /* Pods_NessieTestProjTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +219,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EADC8342DB705A16CD0268A1 /* Pods_Nessie_iOS_Wrapper.framework in Frameworks */,
+				366D7F1DD1A7973F39129E87 /* Pods_Nessie_iOS_Wrapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8C549FD1ACEE595002206AC /* NessieFmwk.framework in Frameworks */,
+				6479DC640AB02F6C6C6E9C66 /* Pods_Nessie_iOS_WrapperTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +239,12 @@
 			isa = PBXGroup;
 			children = (
 				2CA67DC31DA8BFA00093B7F6 /* SwiftyJSON.framework */,
-				4043BC7A9BA047A099E40B47 /* Pods_Nessie_iOS_Wrapper.framework */,
-				8BE40FF841192D654BF4C793 /* Pods_NessieTestProj.framework */,
+				959FE9A3928534B07DC6A6C3 /* Pods_Bargent.framework */,
+				9EF8A697F6B2F7518D5B5569 /* Pods_BargentTests.framework */,
+				88A13A31AF6311A44FC89273 /* Pods_Nessie_iOS_Wrapper.framework */,
+				789115495DBC3AEA4AEDA6E0 /* Pods_Nessie_iOS_WrapperTests.framework */,
+				40E382CB411DC6D97057B19F /* Pods_NessieTestProj.framework */,
+				D820C47D8E1E39418F929278 /* Pods_NessieTestProjTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -254,6 +278,25 @@
 				2CA67DB91DA8B74F0093B7F6 /* Info.plist */,
 			);
 			path = BargentUITests;
+			sourceTree = "<group>";
+		};
+		ABA600990F03CC876E91B7D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				049B364CCFB8A3CEFAAEA06C /* Pods-Bargent.debug.xcconfig */,
+				B1C59D9AA026D82FCABB4982 /* Pods-Bargent.release.xcconfig */,
+				8379AD796A2074CAF29129AB /* Pods-BargentTests.debug.xcconfig */,
+				F70678CCAA99038F0E29B247 /* Pods-BargentTests.release.xcconfig */,
+				BB5E060ED3D16158836905D8 /* Pods-Nessie-iOS-Wrapper.debug.xcconfig */,
+				8CFD6F6A9172FCF520FEDB23 /* Pods-Nessie-iOS-Wrapper.release.xcconfig */,
+				DFE5C4C1276A1AFA153A501E /* Pods-Nessie-iOS-WrapperTests.debug.xcconfig */,
+				BA3F3EE2D6488BC6C92D74B5 /* Pods-Nessie-iOS-WrapperTests.release.xcconfig */,
+				E47B1DE6C19CFF40637C1527 /* Pods-NessieTestProj.debug.xcconfig */,
+				6BFF42B96B47C93EF1201D59 /* Pods-NessieTestProj.release.xcconfig */,
+				79C36EDDA93CA9008E801DDB /* Pods-NessieTestProjTests.debug.xcconfig */,
+				A5F828AF8AD6EDD46CA824A4 /* Pods-NessieTestProjTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		B834EB0F1AE5BB5000379E11 /* NessieTestProj */ = {
@@ -308,8 +351,8 @@
 				2CA67DAB1DA8B74F0093B7F6 /* BargentTests */,
 				2CA67DB61DA8B74F0093B7F6 /* BargentUITests */,
 				B8C549F21ACEE595002206AC /* Products */,
-				F140BCB74EBB7A3A814D677B /* Pods */,
 				084A162C48D1036333F06D86 /* Frameworks */,
+				ABA600990F03CC876E91B7D0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -374,17 +417,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F140BCB74EBB7A3A814D677B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				56A7A45AD1C469B89D0C6FE9 /* Pods-Nessie-iOS-Wrapper.debug.xcconfig */,
-				57C2E31B0FA56AC94DDD7A50 /* Pods-Nessie-iOS-Wrapper.release.xcconfig */,
-				CD131C9BC59CF05889A291E7 /* Pods-NessieTestProj.debug.xcconfig */,
-				5B4FB38B5F365A889DDFFCAD /* Pods-NessieTestProj.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -403,9 +435,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CA67DC01DA8B74F0093B7F6 /* Build configuration list for PBXNativeTarget "Bargent" */;
 			buildPhases = (
+				EFBB07CD8060FC5B48ADD149 /* [CP] Check Pods Manifest.lock */,
 				2CA67D911DA8B74E0093B7F6 /* Sources */,
 				2CA67D921DA8B74E0093B7F6 /* Frameworks */,
 				2CA67D931DA8B74E0093B7F6 /* Resources */,
+				31501E9D4517A8A7642C7C59 /* [CP] Embed Pods Frameworks */,
+				899CA0AB1310684BD620C95B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -420,9 +455,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CA67DC11DA8B74F0093B7F6 /* Build configuration list for PBXNativeTarget "BargentTests" */;
 			buildPhases = (
+				9E37F2BF782AFDF5DA8BC71A /* [CP] Check Pods Manifest.lock */,
 				2CA67DA41DA8B74F0093B7F6 /* Sources */,
 				2CA67DA51DA8B74F0093B7F6 /* Frameworks */,
 				2CA67DA61DA8B74F0093B7F6 /* Resources */,
+				6FDB3919D50563A7482CFA01 /* [CP] Embed Pods Frameworks */,
+				C59DC051AB48E955743FD000 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -456,13 +494,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B834EB2A1AE5BB5000379E11 /* Build configuration list for PBXNativeTarget "NessieTestProj" */;
 			buildPhases = (
-				A4B405269EF1B3F49B4952A4 /* Check Pods Manifest.lock */,
+				19D644E23E1E603326562F4E /* [CP] Check Pods Manifest.lock */,
 				B834EB0A1AE5BB5000379E11 /* Sources */,
 				B834EB0B1AE5BB5000379E11 /* Frameworks */,
 				B834EB0C1AE5BB5000379E11 /* Resources */,
-				CA21D163E547E1ADE39E1BFF /* Embed Pods Frameworks */,
-				37EDA3135788CEE28E0F0032 /* Copy Pods Resources */,
 				5B4B74EA1BB98A0600197534 /* Embed Frameworks */,
+				64D8F4786B402F43FC93671B /* [CP] Embed Pods Frameworks */,
+				275875B582DAB376E703521A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -478,9 +516,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B834EB2D1AE5BB5000379E11 /* Build configuration list for PBXNativeTarget "NessieTestProjTests" */;
 			buildPhases = (
+				0E2DEE535489DD31EF836065 /* [CP] Check Pods Manifest.lock */,
 				B834EB1E1AE5BB5000379E11 /* Sources */,
 				B834EB1F1AE5BB5000379E11 /* Frameworks */,
 				B834EB201AE5BB5000379E11 /* Resources */,
+				3209BFADFE2A28BBAB1C0E89 /* [CP] Embed Pods Frameworks */,
+				D7997B5651651999321B220B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -496,12 +537,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8C54A071ACEE595002206AC /* Build configuration list for PBXNativeTarget "Nessie-iOS-Wrapper" */;
 			buildPhases = (
-				2EAC938343E6A30853EC0752 /* Check Pods Manifest.lock */,
+				626D3F3AE6B1161EB4005993 /* [CP] Check Pods Manifest.lock */,
 				B8C549EC1ACEE595002206AC /* Sources */,
 				B8C549ED1ACEE595002206AC /* Frameworks */,
 				B8C549EE1ACEE595002206AC /* Headers */,
 				B8C549EF1ACEE595002206AC /* Resources */,
-				F7D292F0C4AA06F3A7898A67 /* Copy Pods Resources */,
+				BCEC7CF626A4F9E2DAE8ED49 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -516,9 +557,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8C54A0A1ACEE595002206AC /* Build configuration list for PBXNativeTarget "Nessie-iOS-WrapperTests" */;
 			buildPhases = (
+				E6054E30AAFBB5493AFFCD95 /* [CP] Check Pods Manifest.lock */,
 				B8C549F81ACEE595002206AC /* Sources */,
 				B8C549F91ACEE595002206AC /* Frameworks */,
 				B8C549FA1ACEE595002206AC /* Resources */,
+				15952D0ED967DD4EA9286390 /* [CP] Embed Pods Frameworks */,
+				FD9126CFF220CAEA31A0B96B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -653,14 +697,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2EAC938343E6A30853EC0752 /* Check Pods Manifest.lock */ = {
+		0E2DEE535489DD31EF836065 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,14 +712,44 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		37EDA3135788CEE28E0F0032 /* Copy Pods Resources */ = {
+		15952D0ED967DD4EA9286390 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nessie-iOS-WrapperTests/Pods-Nessie-iOS-WrapperTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19D644E23E1E603326562F4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		275875B582DAB376E703521A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,14 +757,44 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NessieTestProj/Pods-NessieTestProj-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A4B405269EF1B3F49B4952A4 /* Check Pods Manifest.lock */ = {
+		31501E9D4517A8A7642C7C59 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bargent/Pods-Bargent-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3209BFADFE2A28BBAB1C0E89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NessieTestProjTests/Pods-NessieTestProjTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		626D3F3AE6B1161EB4005993 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -698,14 +802,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		CA21D163E547E1ADE39E1BFF /* Embed Pods Frameworks */ = {
+		64D8F4786B402F43FC93671B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -713,19 +817,139 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NessieTestProj/Pods-NessieTestProj-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F7D292F0C4AA06F3A7898A67 /* Copy Pods Resources */ = {
+		6FDB3919D50563A7482CFA01 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BargentTests/Pods-BargentTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		899CA0AB1310684BD620C95B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bargent/Pods-Bargent-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E37F2BF782AFDF5DA8BC71A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BCEC7CF626A4F9E2DAE8ED49 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nessie-iOS-Wrapper/Pods-Nessie-iOS-Wrapper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C59DC051AB48E955743FD000 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BargentTests/Pods-BargentTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7997B5651651999321B220B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NessieTestProjTests/Pods-NessieTestProjTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6054E30AAFBB5493AFFCD95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EFBB07CD8060FC5B48ADD149 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD9126CFF220CAEA31A0B96B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nessie-iOS-WrapperTests/Pods-Nessie-iOS-WrapperTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -872,6 +1096,7 @@
 /* Begin XCBuildConfiguration section */
 		2CA67DBA1DA8B74F0093B7F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 049B364CCFB8A3CEFAAEA06C /* Pods-Bargent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -888,6 +1113,7 @@
 		};
 		2CA67DBB1DA8B74F0093B7F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1C59D9AA026D82FCABB4982 /* Pods-Bargent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -904,6 +1130,7 @@
 		};
 		2CA67DBC1DA8B74F0093B7F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8379AD796A2074CAF29129AB /* Pods-BargentTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -921,6 +1148,7 @@
 		};
 		2CA67DBD1DA8B74F0093B7F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F70678CCAA99038F0E29B247 /* Pods-BargentTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -970,7 +1198,7 @@
 		};
 		B834EB2B1AE5BB5000379E11 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD131C9BC59CF05889A291E7 /* Pods-NessieTestProj.debug.xcconfig */;
+			baseConfigurationReference = E47B1DE6C19CFF40637C1527 /* Pods-NessieTestProj.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -987,7 +1215,7 @@
 		};
 		B834EB2C1AE5BB5000379E11 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B4FB38B5F365A889DDFFCAD /* Pods-NessieTestProj.release.xcconfig */;
+			baseConfigurationReference = 6BFF42B96B47C93EF1201D59 /* Pods-NessieTestProj.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -1000,6 +1228,7 @@
 		};
 		B834EB2E1AE5BB5000379E11 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79C36EDDA93CA9008E801DDB /* Pods-NessieTestProjTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1020,6 +1249,7 @@
 		};
 		B834EB2F1AE5BB5000379E11 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5F828AF8AD6EDD46CA824A4 /* Pods-NessieTestProjTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1121,7 +1351,7 @@
 		};
 		B8C54A081ACEE595002206AC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56A7A45AD1C469B89D0C6FE9 /* Pods-Nessie-iOS-Wrapper.debug.xcconfig */;
+			baseConfigurationReference = BB5E060ED3D16158836905D8 /* Pods-Nessie-iOS-Wrapper.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -1141,7 +1371,7 @@
 		};
 		B8C54A091ACEE595002206AC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57C2E31B0FA56AC94DDD7A50 /* Pods-Nessie-iOS-Wrapper.release.xcconfig */;
+			baseConfigurationReference = 8CFD6F6A9172FCF520FEDB23 /* Pods-Nessie-iOS-Wrapper.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -1160,6 +1390,7 @@
 		};
 		B8C54A0B1ACEE595002206AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFE5C4C1276A1AFA153A501E /* Pods-Nessie-iOS-WrapperTests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1177,6 +1408,7 @@
 		};
 		B8C54A0C1ACEE595002206AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA3F3EE2D6488BC6C92D74B5 /* Pods-Nessie-iOS-WrapperTests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
