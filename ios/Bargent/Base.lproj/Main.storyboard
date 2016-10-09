@@ -20,7 +20,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xhN-Do-gFl">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <color key="barTintColor" red="0.92884615380000002" green="0.25929856606930374" blue="0.33912773239410143" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.92884615380000002" green="0.28763558296942443" blue="0.25191662547161042" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="0.95863381410000004" green="0.95863381410000004" blue="0.95863381410000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>

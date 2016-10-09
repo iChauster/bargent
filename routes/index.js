@@ -27,13 +27,23 @@ app.post('/getExpenseData', function (req,res){
  			}
  			console.log(arr[a].description + "====================" + a);
  			getConcept(arr[a].description + ' ' + string, function(res){
- 				arr[a].category = JSON.parse(res).concepts[0].text;
- 				console.log(arr[a].category);
- 				a ++;
- 				if(a < arr.length){
- 					loop(arr)
+ 				if(res != ""){
+	 				arr[a].category = JSON.parse(res).concepts[0].text;
+	 				console.log(arr[a].category);
+	 				a ++;
+	 				if(a < arr.length){
+	 					loop(arr)
+	 				}else{
+	 					end();
+	 				}
  				}else{
- 					end();
+ 					arr[a].category = "Miscellaneous"
+ 					a ++;
+ 					if(a < arr.length){
+ 						loop(arr);
+ 					}else{
+ 						end();
+ 					}
  				}
 
 			});
@@ -69,8 +79,10 @@ function getConcept(textInContext, callback) {
 	alchemy_language.concepts(parameters, function (err, response) {
   		if (err){
     		console.log('error:', err);
+    		callback("");
     	} else {
     		var a = JSON.stringify(response, null, 2);
+    		console.log(a)
     		callback(a);
     	}
 	});

@@ -20,6 +20,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var badDict = [AnyObject]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        let nib = UINib(nibName: "TableSectionHeader", bundle: nil)
+        tableView.registerNib(nib, forHeaderFooterViewReuseIdentifier: "TableSectionHeader")
         client.setKey("d914174469cc843bb832513eda8b644b")
         self.testGetAccounts()
         testGetAllPurchasesFromAccount()
@@ -38,7 +40,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 if let array = response as Array<Account>? {
                     if array.count > 0 {
                         let account = array[0] as Account?
-                        print(account!.accountId)
                         print(array)
                     } else {
                         print("No accounts found")
@@ -85,7 +86,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         })
     }
     func pushToServer(array : NSMutableArray) {
-        print(array)
         do {
             let jsonData = try NSJSONSerialization.dataWithJSONObject(array, options: NSJSONWritingOptions.PrettyPrinted)
             let string = NSMutableData(data: jsonData)
@@ -115,7 +115,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                 let arr  = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! NSMutableArray;
                                 var x = 0;
                                 for obj in arr {
-                                    if(x == 4){
+                                    if(x == arr.count - 1){
                                         x += 1;
                                     }else{
                                         let string = obj["category"] as! String
@@ -130,7 +130,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                     }
                                     
                                 }
-                                print(self.dict)
                                 let newDict = NSMutableDictionary();
                                 for (key, value) in self.dict {
                                     let arr = value as! NSArray
@@ -141,13 +140,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                     }
                                     newDict.setValue(total, forKey: key as! String)
                                 }
-                                print(newDict)
                                 self.totalMoney = newDict
                                 let sortedKeys2 = newDict.keysSortedByValueUsingComparator
                                     {
                                         ($0 as! NSNumber).compare($1 as! NSNumber)
                                 }
-                                self.newDict = sortedKeys2
+                                let ascendingKeys = sortedKeys2.reverse()
+                                for object in ascendingKeys {
+                                    let a = self.totalMoney.objectForKey(object) as! NSNumber
+                                    if(a > 125){
+                                        self.badDict.append(object)
+                                    }else if (a > 55){
+                                        self.okayDict.append(object)
+                                    }else{
+                                        self.goodDict.append(object)
+                                    }
+                                }
                                 self.tableView.reloadData()
                             
                             }catch{
@@ -164,33 +172,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        /*var x = 0, y = 0, z = 0
-        for (_, values) in self.totalMoney{
-            let da = Double(values as! NSNumber)
-            if (da < 35){
-                z += 1;
-            }else if (da < 140){
-                y += 1;
-            }else{
-                x += 1;
-            }
-            
-        }
         if(section == 0){
-            return x;
+            return self.badDict.count;
         }else if (section == 1){
-            return y;
+            return self.okayDict.count;
         }else {
-            return z;
-        }*/
-        return self.newDict.count;
+            return self.goodDict.count;
+        }
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1;
+        return 3;
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("BargentCell") as! BargentTableViewCell
-        let key = self.newDict[indexPath.row] as! String
+        var key = ""
+        if(indexPath.section == 0){
+            key = self.badDict[indexPath.row] as! String
+        }else if(indexPath.section == 1){
+            key = self.okayDict[indexPath.row] as! String
+        }else{
+            key = self.goodDict[indexPath.row] as! String
+        }
         let array = self.dict[key] as! NSMutableArray;
         var total = 0.0;
         for i in array {
@@ -199,6 +201,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.cashLabel.text = "$" + String(total)
         cell.infoLabel.text = key;
         
+        return cell;
+    }
+     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = self.tableView.dequeueReusableHeaderFooterViewWithIdentifier("TableSectionHeader")
+        let header = cell as! TableSectionHeader
+        if(section == 0){
+            header.title.text = "Alert"
+        }else if (section == 1){
+            header.title.text = "Moderate"
+        }else{
+            header.title.text = "Low Priority"
+        }
         return cell;
     }
   /*  func testGetAccount(accountId: String) {
