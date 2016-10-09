@@ -7,7 +7,6 @@ html, body {
 	height: 100%;
 	display: table;
 	background: #FF6E40;
-	position: absolute;
 }
 .nest{
 	display: table-cell;
@@ -32,6 +31,15 @@ html, body {
 	background: #fff;
 }
 #inage{
+	width: 500px;
+	height: 500px;
+}
+.inner{
+	vertical-align: middle;
+	text-align: center;
+	display: table-cell;
+}
+#dotas{
 	width: 150px;
-	height: 200px;
+	height: 60px;
 }

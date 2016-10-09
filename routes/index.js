@@ -87,21 +87,29 @@ function priceCompare(a,b){
 	
 	var apiKey = "d914174469cc843bb832513eda8b644b";
  var ob =  {
-              "name": "Walmart",
-              "category" : [
-              "Pharmacy, Food, Grocery"],
-             "address": {
-                 "street_number": "17",
-                   "street_name": "Cat",
-                   "city": "Detroit",
-                   "state": "MI",
-                   "zip": "48201"
-           },
-               "geocode": {
-                   "lat": 42,
-                   "lng": 83
-               }
-           }
+      "name": "Ithaca Bakery",
+      "category": [
+        "cafe",
+        "bakery",
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "geocode": {
+        "lat": 42.44261090000001,
+        "lng": -76.5086618
+      },
+      "address": {
+        "zip": "14850",
+        "city": "Ithaca",
+        "street number": "400",
+        "state": "NY",
+        "street name": "North Meadow Street"
+      }
+    }
  
 //Config Stuff
 var Config = (function() {
