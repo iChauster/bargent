@@ -11,13 +11,20 @@ import NessieFmwk
 
 private let reuseIdentifier = "BargentCell"
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    @IBOutlet weak var tableView : UITableView!
+    var totalMoney = NSMutableDictionary()
     let client = NSEClient.sharedInstance
+    var dict = NSMutableDictionary()
+    var newDict = [AnyObject]()
     override func viewDidLoad() {
         super.viewDidLoad()
         client.setKey("d914174469cc843bb832513eda8b644b")
         self.testGetAccounts()
         testGetAllPurchasesFromAccount()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    override func prefersStatusBarHidden() -> Bool {
+        return true;
     }
     func testGetAccounts() {
         let accountType = AccountType.Savings
@@ -103,8 +110,44 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     if(httpResponse?.statusCode == 200){
                         dispatch_async(dispatch_get_main_queue(), {
                             do{
-                                let arr  = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! NSArray;
-                                print(arr.reverse())
+                                let arr  = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! NSMutableArray;
+                                var x = 0;
+                                for obj in arr {
+                                    if(x == 4){
+                                        x += 1;
+                                    }else{
+                                        let string = obj["category"] as! String
+                                        if (self.dict.valueForKey(string) != nil){
+                                            let array = self.dict.valueForKey(string)
+                                            array!.addObject(obj)
+                                            self.dict.setValue(array, forKey: string)
+                                        }else{
+                                            self.dict.setValue(NSMutableArray(array: [obj]), forKey: string)
+                                        }
+                                        x += 1;
+                                    }
+                                    
+                                }
+                                print(self.dict)
+                                let newDict = NSMutableDictionary();
+                                for (key, value) in self.dict {
+                                    let arr = value as! NSArray
+                                    var total = 0.0;
+                                    for i in arr {
+                                        
+                                        total += Double(i["amount"] as! NSNumber)
+                                    }
+                                    newDict.setValue(total, forKey: key as! String)
+                                }
+                                print(newDict)
+                                self.totalMoney = newDict
+                                let sortedKeys2 = newDict.keysSortedByValueUsingComparator
+                                    {
+                                        ($0 as! NSNumber).compare($1 as! NSNumber)
+                                }
+                                self.newDict = sortedKeys2
+                                self.tableView.reloadData()
+                            
                             }catch{
                                 
                             }
@@ -113,22 +156,48 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     
                 }
             })
-            
             dataTask.resume()
-            
         } catch{
             print("parsing error")
         }
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3;
+        /*var x = 0, y = 0, z = 0
+        for (_, values) in self.totalMoney{
+            let da = Double(values as! NSNumber)
+            if (da < 35){
+                z += 1;
+            }else if (da < 140){
+                y += 1;
+            }else{
+                x += 1;
+            }
+            
+        }
+        if(section == 0){
+            return x;
+        }else if (section == 1){
+            return y;
+        }else {
+            return z;
+        }*/
+        return self.newDict.count;
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1;
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("BargentCell")
-        return cell!;
+        let cell = tableView.dequeueReusableCellWithIdentifier("BargentCell") as! BargentTableViewCell
+        let key = self.newDict[indexPath.row] as! String
+        let array = self.dict[key] as! NSMutableArray;
+        var total = 0.0;
+        for i in array {
+            total += Double(i["amount"] as! NSNumber)
+        }
+        cell.cashLabel.text = "$" + String(total)
+        cell.infoLabel.text = key;
+        
+        return cell;
     }
   /*  func testGetAccount(accountId: String) {
         AccountRequest().getAccount(accountId, completion:{(response, error) in

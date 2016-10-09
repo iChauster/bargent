@@ -16,6 +16,7 @@
 		2CA67DB81DA8B74F0093B7F6 /* BargentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA67DB71DA8B74F0093B7F6 /* BargentUITests.swift */; };
 		2CA67DC41DA8BFA00093B7F6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA67DC31DA8BFA00093B7F6 /* SwiftyJSON.framework */; };
 		2CA67DC51DA8C00C0093B7F6 /* NessieFmwk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C549F11ACEE595002206AC /* NessieFmwk.framework */; };
+		2CA67E0D1DA9A6960093B7F6 /* BargentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA67E0C1DA9A6960093B7F6 /* BargentTableViewCell.swift */; };
 		366D7F1DD1A7973F39129E87 /* Pods_Nessie_iOS_Wrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A13A31AF6311A44FC89273 /* Pods_Nessie_iOS_Wrapper.framework */; };
 		5B4B74E61BB98A0600197534 /* NessieFmwk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C549F11ACEE595002206AC /* NessieFmwk.framework */; };
 		5B4B74E71BB98A0600197534 /* NessieFmwk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8C549F11ACEE595002206AC /* NessieFmwk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -120,6 +121,7 @@
 		2CA67DB71DA8B74F0093B7F6 /* BargentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BargentUITests.swift; sourceTree = "<group>"; };
 		2CA67DB91DA8B74F0093B7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA67DC31DA8BFA00093B7F6 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/Nessie-iOS-Wrapper-adczflazfnqhuogelqbwqwrbrijb/Build/Products/Debug-iphonesimulator/Pods-Nessie-iOS-Wrapper/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		2CA67E0C1DA9A6960093B7F6 /* BargentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BargentTableViewCell.swift; sourceTree = "<group>"; };
 		40E382CB411DC6D97057B19F /* Pods_NessieTestProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NessieTestProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB790531B9670A800488749 /* Merchant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Merchant.swift; sourceTree = "<group>"; };
 		5BF0FE9F1D8C675700223ED4 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				2CA67D971DA8B74E0093B7F6 /* AppDelegate.swift */,
 				2CA67D991DA8B74E0093B7F6 /* ViewController.swift */,
 				2CA67D9B1DA8B74E0093B7F6 /* Main.storyboard */,
+				2CA67E0C1DA9A6960093B7F6 /* BargentTableViewCell.swift */,
 				2CA67D9E1DA8B74F0093B7F6 /* Assets.xcassets */,
 				2CA67DA01DA8B74F0093B7F6 /* LaunchScreen.storyboard */,
 				2CA67DA31DA8B74F0093B7F6 /* Info.plist */,
@@ -960,6 +963,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CA67D9A1DA8B74E0093B7F6 /* ViewController.swift in Sources */,
+				2CA67E0D1DA9A6960093B7F6 /* BargentTableViewCell.swift in Sources */,
 				2CA67D981DA8B74E0093B7F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

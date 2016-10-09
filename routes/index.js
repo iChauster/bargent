@@ -56,6 +56,8 @@ app.post('/getExpenseData', function (req,res){
 			console.log(end);
 			array.sort(priceCompare)
 			console.log(array.reverse());
+			array = array.reverse();
+			array.unshift({"total" : totalAmount})
 			res.send(JSON.stringify(array.reverse()));
 		}
 });
