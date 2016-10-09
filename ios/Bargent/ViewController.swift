@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let client = NSEClient.sharedInstance
     var dict = NSMutableDictionary()
     var newDict = [AnyObject]()
+    var 
     override func viewDidLoad() {
         super.viewDidLoad()
         client.setKey("d914174469cc843bb832513eda8b644b")
