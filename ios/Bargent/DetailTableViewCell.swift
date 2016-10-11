@@ -1,18 +1,17 @@
 //
-//  BargentTableViewCell.swift
+//  DetailTableViewCell.swift
 //  Nessie-iOS-Wrapper
 //
-//  Created by Ivan Chau on 10/8/16.
+//  Created by Ivan Chau on 10/9/16.
 //  Copyright © 2016 Nessie. All rights reserved.
 //
 
 import UIKit
 
-class BargentTableViewCell: UITableViewCell {
-    @IBOutlet weak var infoLabel: UILabel!
-    @IBOutlet weak var cashLabel: UILabel!
-    var category : String!
-    var status : String!
+class DetailTableViewCell: UITableViewCell {
+    @IBOutlet weak var name : UILabel!
+    @IBOutlet weak var goods : UILabel!
+    @IBOutlet weak var price : UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

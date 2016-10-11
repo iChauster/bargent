@@ -2,7 +2,7 @@ var express = require('express');
 var request = require('superagent');
 var watson = require('watson-developer-cloud');
 var alchemy_language = watson.alchemy_language({
-  api_key: '246270440a48a011f8f9d55cab7956302a918a99'
+  api_key: '42fd3e26c5147b2477e5cc4636ffb1687366ac70'
 })
 var app = express.Router();
 
@@ -19,9 +19,9 @@ app.post('/getExpenseData', function (req,res){
 	var loop = function(arr){
 		var obj = arr[a];
 		Merchant.getMerchant(obj.merchant, function (res){
-			//console.log(res);
  			var string = "";
  			var categories = res.category;
+ 			obj.merchantName = res.name;
  			for (i in categories){
  				string = string.concat(categories[i], ", ");
  			}

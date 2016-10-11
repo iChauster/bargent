@@ -10,7 +10,7 @@ import UIKit
 import NessieFmwk
 
 private let reuseIdentifier = "BargentCell"
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate{
     @IBOutlet weak var tableView : UITableView!
     var totalMoney = NSMutableDictionary()
     let client = NSEClient.sharedInstance
@@ -18,6 +18,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var goodDict = [AnyObject]()
     var okayDict = [AnyObject]()
     var badDict = [AnyObject]()
+    var openingFrame : CGRect?
+    var nationalAvg = NSMutableDictionary(objects:[307,30,80,34,119] , forKeys:["Food", "Housekeeping supplies", "Apparel & services" , "Personal care products & services", "Miscellaneous"])
+    var grandMonthlyTotal = 0.0;
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let presentationAnimator = ExpandAnimator.animator
+        presentationAnimator.openingFrame = openingFrame!
+        presentationAnimator.transitionMode = .Present;
+        return presentationAnimator
+    }
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let presentationAnimator = ExpandAnimator.animator
+        presentationAnimator.openingFrame = openingFrame!
+        presentationAnimator.transitionMode = .Dismiss;
+        return presentationAnimator
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         let nib = UINib(nibName: "TableSectionHeader", bundle: nil)
@@ -39,7 +54,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             } else {
                 if let array = response as Array<Account>? {
                     if array.count > 0 {
-                        let account = array[0] as Account?
+                        _ = array[0] as Account?
                         print(array)
                     } else {
                         print("No accounts found")
@@ -70,11 +85,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             } else {
                 if let array = response as Array<Purchase>? {
                     if array.count > 0 {
-                        let purchase = array[0] as Purchase!
+                        _ = array[0] as Purchase!
                         print(array)
                         for purchase in array {
                             print(purchase.description, purchase.amount, purchase.merchantId, purchase.type)
-                            pushArray.addObject(NSDictionary(objects: [purchase.amount,purchase.description!,purchase.merchantId,purchase.type!], forKeys: ["amount","description","merchant","type"]));
+                            pushArray.addObject(NSDictionary(objects: [purchase.amount,purchase.description!,purchase.merchantId,purchase.type!,purchase.purchaseDate!.description], forKeys: ["amount","description","merchant","type","purchase_date"]));
                         }
                         self.pushToServer(pushArray)
                         //self.testGetPurchase(purchase.purchaseId)
@@ -146,8 +161,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                         ($0 as! NSNumber).compare($1 as! NSNumber)
                                 }
                                 let ascendingKeys = sortedKeys2.reverse()
+                                
                                 for object in ascendingKeys {
-                                    let a = self.totalMoney.objectForKey(object) as! NSNumber
+                                    let a = Double(self.totalMoney.objectForKey(object) as! NSNumber)
+                                    self.grandMonthlyTotal += a;
                                     if(a > 125){
                                         self.badDict.append(object)
                                     }else if (a > 55){
@@ -194,12 +211,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             key = self.goodDict[indexPath.row] as! String
         }
         let array = self.dict[key] as! NSMutableArray;
+
         var total = 0.0;
         for i in array {
             total += Double(i["amount"] as! NSNumber)
         }
+        if((self.nationalAvg[key]) != nil){
+            let val = self.nationalAvg[key] as! Double
+            if(total > val){
+                cell.status = "Over national avg : " + String(total) + " v.s the average of " + String(val)
+            }else if (val > total){
+                cell.status = "Below national avg : " + String(total) + " v.s the average of " + String(val)
+            }
+            
+        }
         cell.cashLabel.text = "$" + String(total)
         cell.infoLabel.text = key;
+        cell.category = key;
         
         return cell;
     }
@@ -214,6 +242,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             header.title.text = "Low Priority"
         }
         return cell;
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let attributesFrame = tableView.cellForRowAtIndexPath(indexPath);
+        let attribute = attributesFrame?.frame;
+        let frameToOpenFrame = tableView.convertRect(attribute!, toView: tableView.superview)
+        openingFrame = frameToOpenFrame
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let expandedvc = storyboard.instantiateViewControllerWithIdentifier("DetailedViewController") as! DetailedViewController
+        expandedvc.transitioningDelegate = self
+        expandedvc.modalPresentationStyle = .Custom
+        
+        let selectedCell = self.tableView.cellForRowAtIndexPath(self.tableView.indexPathForSelectedRow!) as! BargentTableViewCell
+        expandedvc.category = selectedCell.category
+        expandedvc.grandTotal = self.grandMonthlyTotal
+        expandedvc.cashString = selectedCell.cashLabel.text
+        expandedvc.status = selectedCell.status;
+        expandedvc.expenses = self.dict
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        presentViewController(expandedvc, animated: true, completion: nil)
+        
     }
   /*  func testGetAccount(accountId: String) {
         AccountRequest().getAccount(accountId, completion:{(response, error) in

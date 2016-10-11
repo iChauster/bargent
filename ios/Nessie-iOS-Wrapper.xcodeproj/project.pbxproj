@@ -19,6 +19,9 @@
 		2CA67E0D1DA9A6960093B7F6 /* BargentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA67E0C1DA9A6960093B7F6 /* BargentTableViewCell.swift */; };
 		2CA67E111DAA01430093B7F6 /* TableSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA67E101DAA01430093B7F6 /* TableSectionHeader.xib */; };
 		2CA67E151DAA03750093B7F6 /* TableSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA67E141DAA03750093B7F6 /* TableSectionHeader.swift */; };
+		2CA67E181DAA14180093B7F6 /* ExpandAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA67E171DAA14180093B7F6 /* ExpandAnimator.swift */; };
+		2CA67E1A1DAA14610093B7F6 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA67E191DAA14610093B7F6 /* DetailedViewController.swift */; };
+		2CA67E1C1DAA18520093B7F6 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA67E1B1DAA18520093B7F6 /* DetailTableViewCell.swift */; };
 		366D7F1DD1A7973F39129E87 /* Pods_Nessie_iOS_Wrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A13A31AF6311A44FC89273 /* Pods_Nessie_iOS_Wrapper.framework */; };
 		5B4B74E61BB98A0600197534 /* NessieFmwk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C549F11ACEE595002206AC /* NessieFmwk.framework */; };
 		5B4B74E71BB98A0600197534 /* NessieFmwk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8C549F11ACEE595002206AC /* NessieFmwk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -126,6 +129,9 @@
 		2CA67E0C1DA9A6960093B7F6 /* BargentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BargentTableViewCell.swift; sourceTree = "<group>"; };
 		2CA67E101DAA01430093B7F6 /* TableSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableSectionHeader.xib; sourceTree = "<group>"; };
 		2CA67E141DAA03750093B7F6 /* TableSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSectionHeader.swift; sourceTree = "<group>"; };
+		2CA67E171DAA14180093B7F6 /* ExpandAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandAnimator.swift; sourceTree = "<group>"; };
+		2CA67E191DAA14610093B7F6 /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
+		2CA67E1B1DAA18520093B7F6 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		40E382CB411DC6D97057B19F /* Pods_NessieTestProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NessieTestProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB790531B9670A800488749 /* Merchant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Merchant.swift; sourceTree = "<group>"; };
 		5BF0FE9F1D8C675700223ED4 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +267,8 @@
 				2CA67E101DAA01430093B7F6 /* TableSectionHeader.xib */,
 				2CA67D971DA8B74E0093B7F6 /* AppDelegate.swift */,
 				2CA67D991DA8B74E0093B7F6 /* ViewController.swift */,
+				2CA67E1D1DAA186D0093B7F6 /* Detailed */,
+				2CA67E171DAA14180093B7F6 /* ExpandAnimator.swift */,
 				2CA67E141DAA03750093B7F6 /* TableSectionHeader.swift */,
 				2CA67D9B1DA8B74E0093B7F6 /* Main.storyboard */,
 				2CA67E0C1DA9A6960093B7F6 /* BargentTableViewCell.swift */,
@@ -287,6 +295,15 @@
 				2CA67DB91DA8B74F0093B7F6 /* Info.plist */,
 			);
 			path = BargentUITests;
+			sourceTree = "<group>";
+		};
+		2CA67E1D1DAA186D0093B7F6 /* Detailed */ = {
+			isa = PBXGroup;
+			children = (
+				2CA67E191DAA14610093B7F6 /* DetailedViewController.swift */,
+				2CA67E1B1DAA18520093B7F6 /* DetailTableViewCell.swift */,
+			);
+			name = Detailed;
 			sourceTree = "<group>";
 		};
 		ABA600990F03CC876E91B7D0 /* Pods */ = {
@@ -969,7 +986,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CA67E181DAA14180093B7F6 /* ExpandAnimator.swift in Sources */,
 				2CA67D9A1DA8B74E0093B7F6 /* ViewController.swift in Sources */,
+				2CA67E1C1DAA18520093B7F6 /* DetailTableViewCell.swift in Sources */,
+				2CA67E1A1DAA14610093B7F6 /* DetailedViewController.swift in Sources */,
 				2CA67E151DAA03750093B7F6 /* TableSectionHeader.swift in Sources */,
 				2CA67E0D1DA9A6960093B7F6 /* BargentTableViewCell.swift in Sources */,
 				2CA67D981DA8B74E0093B7F6 /* AppDelegate.swift in Sources */,
