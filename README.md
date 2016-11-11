@@ -1,3 +1,8 @@
 # Bargent
+## created by Ivan Chau, Brendon Ho and Aneesh Atri.
 
-An MHacks Project we are working on using Capital One's API Nessie
+A pretty okay MHacks project using Capital One's Nessie API.
+
+To run, "cd" into the repository and run 'node app'. Open the ios Nessie workspace and run with target 'Bargent'.
+
+Hope you enjoy!
